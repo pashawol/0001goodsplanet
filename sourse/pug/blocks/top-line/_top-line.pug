@@ -1,6 +1,68 @@
 mixin top-line()
 	// start .top-line
 	+b.top-line.block-with-lazy
-		.container
-			.row top-line
+		+e.head
+			.container
+				.row
+					.col-auto.d-lg-none
+						+b.toggle-menu-mobile--js
+							span
+					.col
+						 
+						+e.menu.d-lg-block.menu-mobile.menu-mobile--js
+							.menu-mobile__inner
+								.container
+										ul
+											li
+												a(href="#") Как сделать покупку    
+											li
+												a(href="#")  Оплата    
+											li
+												a(href="#")  Вопрос-ответ    
+											li
+												a(href="#")  О компании    
+											li
+												a(href="#")  Возврат и замена товара    
+											li
+												a(href="#")  Доставка    
+											li
+												a(href="#")  Гарантии
+								+e.foot.d-lg-none
+									.container
+										+e.tel(href="tel:+7(916)900-2-999") +7 (916) 900-2-999
+					.col-auto
+						+e.lk
+							ul
+								li
+									a(href="#")
+										+icon("user")
+										| Вход
+									
+								li
+									a(href="#") Регистрация
+		+e.body
+			.container
+				.row
+					.col-sm-auto.col
+						+e.logo(href="#")
+							img(src="img/svg/logo.svg", alt="")
+					.col.d-none.d-sm-block
+						+b.FORM.search-block
+							+e.BUTTON.btn(type="button")
+								+icon("search")
+							+e.INPUT.control--input(type="text" placeholder="Поиск по каталогу")
+							+e.SELECT.control--select
+								option(value="") Все категории
+								option(value="") Телефоны
+								option(value="") Планшеты
+								option(value="") Ноутбуки
+								option(value="") Аудиотехника
+								option(value="") Автоэлектроника
+					.col-auto.d-none.d-lg-block
+						+e.tel(href="tel:+7(916)900-2-999") +7 (916) 900-2-999
+					.col-auto
+						+e.basket()
+							+e.count 10
+							+icon("basket")
+		
 	// end .top-line

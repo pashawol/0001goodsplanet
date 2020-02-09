@@ -1,9 +1,21 @@
 mixin s-content()
 	// start s-content
-	+b.s-content.section.block-with-lazy#s-content&attributes(attributes)
+	+b.s-content.section.bg-light&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 s-content
+			+b.section-title
+				h2 Интернет-магазин электроники #[span.text-success goods]#[span.text-primary planet]
 				
 			.row
+				.col
+					p Приобретение электроники и техники бытового назначения в интернет-магазинах становится все более востребованным среди покупателей. Это связано не только с широким ассортиментом предлагаемых позиций, но также и с тем, что стоимость товара здесь значительно ниже.
+					p Наш интернет-магазин электроники Lego-market.ru предлагает широкий выбор бытовой техники различного назначения, аксессуаров, авто электроники и других товаров, необходимых для комфортной жизни современному человеку.
+
+				.col-lg-4
+					p В&nbsp;нашем интернет-каталоге Вы&nbsp;можете в&nbsp;любое время выбрать для себя:
+					ul
+						li #[strong Телефоны и аксессуары]
+						li #[strong Бытовую электронику]
+						li #[strong Авто электронику]
+					p И многое другое...
+			+e.btn(href="#") Узнать больше
 	// end s-content

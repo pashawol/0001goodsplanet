@@ -1,0 +1,260 @@
+// start .s-catalog
+.prod-item {
+
+	border-radius: 10px;
+	border: 1px solid #e2e2e2;
+	background-color: #ffffff;
+	padding: rem(20) rem(18) 0;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	@include mt;
+
+	@include media-breakpoint-up(md) {
+
+		&:hover {
+			min-height: initial;
+			transform: translateY(rem(-15));
+			box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+			z-index: 200;
+		}
+	}
+
+	@include media-breakpoint-up(md) {
+
+		&:hover &__hover-hide {
+			opacity: 0;
+		}
+	}
+
+	&__labels {
+		position: absolute;
+		left: rem(-8);
+		top: rem(-8);
+		display: flex;
+		align-items: center;
+	}
+
+	&__img-wrap {
+		display: block;
+		text-align: center;
+		vertical-align: middle;
+
+		@include media-breakpoint-up(sm) {
+
+			height: rem(195);
+			line-height: rem(195);
+		}
+
+		height: rem(100);
+		line-height: rem(100);
+		margin-bottom: rem(13);
+
+		img {
+			max-height: 100%;
+		}
+	}
+
+	&__title {
+		text-align: center;
+		line-height: (20 / 16);
+		min-height: 2em;
+		font-weight: 500;
+		margin-bottom: rem(10);
+
+		a {
+			color: #4F4F4F;
+			text-decoration: none !important;
+
+			&:hover {
+				color: $primary;
+			}
+		}
+	}
+
+	&__price-wrap {
+		margin-top: auto;
+		text-align: center;
+		font-weight: bold;
+		padding-bottom: rem(20);
+		@include mt;
+
+		.row {
+			align-items: center;
+		}
+	}
+
+	&__price {
+		line-height: 1;
+
+		&--old {
+			color: #828282;
+			font-size: rem(12);
+			text-decoration: line-through;
+		}
+	}
+
+	&__btn-wrap {
+		display: none;
+	}
+
+	&__modal {
+		// display: none;
+		border: 1px solid #EBEBEB;
+		margin-bottom: -1px;
+		display: block;
+		margin-left: rem(-20);
+		margin-right: rem(-20);
+		border-radius: 0 0 rem(10) rem(10);
+		justify-content: center;
+		align-items: center;
+		display: flex;
+		color: #4F4F4F;
+		font-weight: 500;
+		font-size: rem(14);
+		padding: rem(10);
+		text-decoration: none !important;
+
+		&:hover {
+			background-color: $primary;
+			color: #ffffff;
+		}
+
+		.icon {
+			font-size: rem(24);
+			margin-right: rem(10);
+		}
+	}
+
+	&__caption {
+		font-size: rem(14);
+		margin-bottom: 0.8em;
+
+		span {
+			color: #828282;
+			font-size: rem(13);
+		}
+	}
+
+	&__btn-basket {
+		@extend .btn;
+		@extend .btn-success;
+		padding: 0;
+		width: rem(40);
+		height: rem(40);
+		border-radius: 50%;
+		color: #ffffff !important;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.icon {
+			font-size: rem(24);
+		}
+	}
+
+
+	&__hover-show {
+		@include media-breakpoint-down(sm) {
+			display: none !important;
+		}
+
+		display: none;
+		position: absolute;
+		width: calc(100% + 2px);
+		top: 90%;
+		background-color: #ffffff;
+		left: -1px;
+		padding: rem(18);
+		border: 1px solid #e2e2e2;
+		border-top: none;
+		background-color: #ffffff;
+		padding: rem(20) rem(18) 0;
+
+		// &:after {
+		// 	content: '';
+		// 	z-index: -1;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	@include a-cent;
+		// 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+		// }
+	}
+
+	@include media-breakpoint-up(xl) {}
+
+	@include media-breakpoint-up(lg) {}
+
+	@include media-breakpoint-up(md) {}
+
+	@include media-breakpoint-up(sm) {}
+
+	@include media-breakpoint-up(xs) {}
+
+}
+
+// end.s-catalog
+
+.d32 {
+	$w: rem(32);
+	width: $w;
+	height: $w;
+	position: relative;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.19);
+	margin-right: rem(20);
+
+	img {
+		@include a-cent;
+		z-index: 4;
+		max-width: rem(20);
+		// height: auto;
+		max-height: rem(20);
+	}
+
+	&:before,
+	&:after {
+		content: "";
+		height: inherit;
+		width: inherit;
+		background: inherit;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&:before {
+		transform: rotate(30deg);
+	}
+
+	&:after {
+		transform: rotate(60deg);
+	}
+
+	&__inner {
+		width: calc(#{$w} - 2px);
+		height: calc(#{$w} - 2px);
+		background: #fff;
+		@include a-cent;
+		z-index: 2;
+
+		&:before,
+		&:after {
+			content: "";
+			height: inherit;
+			width: inherit;
+			background: inherit;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		&:before {
+			transform: rotate(30deg);
+		}
+
+		&:after {
+			transform: rotate(60deg);
+		}
+	}
+}

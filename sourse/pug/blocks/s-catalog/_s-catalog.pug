@@ -1,0 +1,113 @@
+mixin prod(i,t,p,po,pn)
+	+b.prod-item
+		+e.labels
+			block
+			if pn
+				+b.d32.bg-primary
+					+e.inner
+						img(src="img/svg/sale.svg", alt="")
+		+e.img-wrap(href="#")
+			img.res-i.lazy(src="#" data-src=`img/@2x/prod-${i}.jpg`, alt="")
+		+e.title
+			a(href="#")= t
+		+e.price-wrap.prod-item__hover-hide 
+			if p
+				+e.price.text-primary= p
+			else
+				+e.price--old= po
+				+e.price.text-success= pn  
+		+e.hover-show
+			.prod-item__caption 
+				+e.caption-item #[span Разрешение дисплея пикс:] 1280x720
+				+e.caption-item #[span Сенсорный дисплей:] Да
+				+e.caption-item #[span Производитель:] BQ
+				+e.caption-item #[span Операционная система:] Android 6.0
+				+e.caption-item #[span Тип корпуса:] классический
+				+e.caption-item #[span Количество ядер процессора:] 4
+				+e.caption-item #[span Модель телефона:] 5020 Strike
+
+			+e.price-wrap.text-left
+				.row
+					.col
+						if p
+							+e.price.text-primary= p
+						else
+							+e.price--old= po
+							+e.price.text-success= pn
+					.col-auto
+						+e.btn-basket(href="#")
+							+icon("basket") 
+			+e.modal(href="#")
+				+icon('click')
+				| Купить в один клик
+	// /+b.prod-item
+mixin s-catalog()
+	// start s-catalog
+	+b.SECTION.s-catalog.section#s-catalog&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col-auto
+						img(src="img/svg/best.svg", alt="")
+					.col
+						h2 Лучшие предложения
+					.col-auto.d-none.d-lg-block
+						+e.btn(href="#") Смотреть все
+				
+			+e.row.row
+				+e.col.col-lg-3.col-6
+					+prod("1","СЗУ Navitoch 2A iPhone 6",'649.60 ₽')
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+			
+				+e.col.col-lg-3.col-6
+					+prod("2","Смартфон BQ 5020 Strike Red","","4 964.80 ₽","4 964.80 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+			
+				+e.col.col-lg-3.col-6
+					+prod("3","Телефон BQ 1406 Vitre Gold Edition Red","649.60 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+			
+				+e.col.col-lg-3.col-6
+					+prod("4","Радар-детектор PROLOGY iScan-3050","4 640 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+			.text-center.d-lg-none
+				+e.btn(href="#") Смотреть все
+						
+				
+	// end s-catalog
+
+mixin s-catalog2()
+	// start s-catalog
+	+b.SECTION.s-catalog.pt-0#s-catalog&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col-auto
+						img(src="img/svg/sale.svg", alt="")
+					.col
+						h2 Скидки
+					.col-auto.d-none.d-lg-block
+						+e.btn(href="#") Смотреть все
+				
+			+e.row.row
+				+e.col.col-lg-3.col-6
+					+prod("5","СЗУ Navitoch 2A iPhone 6",'','649.60 ₽','197.20 ₽')
+
+				+e.col.col-lg-3.col-6
+					+prod("6","Смартфон BQ 5020 Strike Red","","4 964.80 ₽","4 964.80 ₽")
+
+				+e.col.col-lg-3.col-6
+					+prod("7","Телефон BQ 1406 Vitre Gold Edition Red",'','649.60 ₽','197.20 ₽')
+
+				+e.col.col-lg-3.col-6
+					+prod("8","Радар-детектор PROLOGY iScan-3050",'','649.60 ₽','197.20 ₽')
+			.text-center.d-lg-none
+				+e.btn(href="#") Смотреть все

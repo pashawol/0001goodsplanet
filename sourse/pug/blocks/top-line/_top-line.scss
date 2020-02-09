@@ -1,39 +1,174 @@
 .top-line {
+  font-size: rem(12);
+  position: relative;
+  z-index: 999;
 
-	
-// 
-@include media-breakpoint-up(xl) {}
+  &__head {
+    position: relative;
+    // z-index: 1;
+    border-bottom: 1px solid #EFEFEF;
+    padding-top: rem(11);
+    padding-bottom: rem(11);
+    background-color: #ffffff;
+  }
 
-@include media-breakpoint-up(lg) {}
+  .row {
+    align-items: center;
+  }
 
-@include media-breakpoint-up(md) {}
+  ul {
 
-@include media-breakpoint-up(sm) {}
+    list-style-type: none;
 
-@include media-breakpoint-up(xs) {}
+    margin-bottom: rem(0);
+    align-items: center;
 
-// 
-@include media-breakpoint-between(md, xl) {}
+    .icon {
+      font-size: rem(14);
+      color: $primary !important;
+      margin-right: rem(9);
+    }
+  }
 
-// 
-@include media-breakpoint-only(xs) {}
+  &__menu {
 
-@include media-breakpoint-only(sm) {}
+    // display: none;
+    @include media-breakpoint-up(lg) {
+      ul {
 
-@include media-breakpoint-only(md) {}
+        display: flex;
+        @include roww(9);
+      }
+    }
 
-@include media-breakpoint-only(lg) {}
+    ul a {
+      color: $secondary;
 
-@include media-breakpoint-only(xl) {}
+      &:hover,
+      &.active {
+        color: $primary;
+      }
 
-// 
-@include media-breakpoint-down(xl) {}
+      // color: $secondary !important;
+    }
 
-@include media-breakpoint-down(lg) {}
+  }
 
-@include media-breakpoint-down(md) {}
+  a {
+    text-decoration: none !important;
+  }
 
-@include media-breakpoint-down(sm) {}
+  &__lk {
+    width: rem(150);
 
-@include media-breakpoint-down(xs) {}
+    ul {
+      display: flex;
+      @include roww(10);
+      justify-content: space-between;
+    }
+
+    a {
+      color: $body-color;
+
+      &:hover,
+      &.active {
+        color: $primary;
+      }
+    }
+  }
+
+  &__body {
+    padding-top: rem(17);
+    padding-bottom: rem(18);
+    position: relative;
+    z-index: -2;
+  }
+
+  &__basket {
+    cursor: pointer;
+    border-radius: 50%;
+    width: rem(40);
+    height: rem(40);
+    text-align: center;
+    @extend .btn-success;
+    color: #ffffff;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .icon {
+      flex-shrink: 0;
+      font-size: rem(24);
+    }
+
+  }
+
+  &__count {
+    background-color: $primary;
+    color: #ffffff;
+    text-align: center;
+    @extend .mono;
+    font-weight: 900;
+    position: absolute;
+    width: rem(18);
+    height: rem(18);
+    border-radius: 50%;
+    top: rem(-5);
+    left: rem(-5);
+  }
+
+  &__tel {
+    @extend .text-success;
+    @extend .h5;
+    line-height: 1;
+    font-weight: 900;
+
+  }
+
+
+  &__foot {
+    border-top: 1px solid #E6E6E6;
+    padding: rem(28) 0;
+  }
+
+  // 
+  @include media-breakpoint-up(xl) {}
+
+  @include media-breakpoint-up(lg) {
+    .container .container {
+      padding: 0;
+    }
+  }
+
+  @include media-breakpoint-up(md) {}
+
+  @include media-breakpoint-up(sm) {}
+
+  @include media-breakpoint-up(xs) {}
+
+  // 
+  @include media-breakpoint-between(md, xl) {}
+
+  // 
+  @include media-breakpoint-only(xs) {}
+
+  @include media-breakpoint-only(sm) {}
+
+  @include media-breakpoint-only(md) {}
+
+  @include media-breakpoint-only(lg) {}
+
+  @include media-breakpoint-only(xl) {}
+
+  // 
+  @include media-breakpoint-down(xl) {}
+
+  @include media-breakpoint-down(lg) {}
+
+  @include media-breakpoint-down(md) {}
+
+  @include media-breakpoint-down(sm) {}
+
+  @include media-breakpoint-down(xs) {}
 }

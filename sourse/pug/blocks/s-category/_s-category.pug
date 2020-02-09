@@ -1,0 +1,15 @@
+mixin s-category()
+	// start s-category
+	+b.SECTION.s-category&attributes(attributes)
+		.container 
+			.row
+				mixin item(i,t)
+					+e.col.col-md-4
+						+e.item(href="#").bg-wrap
+							img.object-fit-js.img-bg(src=`img/@2x/cat-${i}.jpg`, alt="")
+							+e.DIV.title= t
+					// /+e.col.col-md-4
+				+item('1','Все смартфоны APPLE в наличии')
+				+item('2','Беспроводные наушники от  ведущих брендов')
+				+item('3','FM Трансмитеры на любой вкус')
+	// end s-category
