@@ -61,4 +61,48 @@ mixin top-nav()
 							li: a(href="#")  Аудиотехника 
 							li: a(href="#")  Автоэлектроника 
 							li: a(href="#")  Прочее 
+
 	// end top-nav
+
+mixin top-nav-sm() 
+	// start top-nav-sm
+	+b.top-nav--sm
+		.no-gutters
+			+b.catalog-menu
+				+e.toggle
+					+e.toggle-text 
+						span
+						| Каталог товаров
+				+e.dropdown
+					ul
+						li
+							a(href="#" style="color: #88C057;") Телефоны
+							ul
+								li: a(href="#") Смартфоны
+								li: a(href="#") Мобильные телефоны
+								li: a(href="#") Телефоны Apple
+						li
+							a(href="#" style="color: #4F4F4F;") Аксессуары
+							ul
+								li: a(href="#") Карты памяти
+								li: a(href="#") Аккумуляторы для телефонов
+								li: a(href="#") Зарядные устройства
+								li: a(href="#") Автомобильные держатели
+								li: a(href="#") Чехлы для телефонов и кейсы
+								li: a(href="#") Часы 
+					//- ul
+					//- 	li: a(href="#")  Планшеты 
+					//- 	li: a(href="#")  Ноутбуки 
+					//- 	li: a(href="#")  Аудиотехника 
+					//- 	li: a(href="#")  Автоэлектроника 
+					//- 	li: a(href="#")  Прочее 
+					//- +item-menu()
+		//- .col.d-none.d-lg-block
+		//- 	+b.menu-top
+		//- 		ul 
+		//- 			li: a(href="#")  Телефоны 
+		//- 			li: a(href="#")  Планшеты 
+		//- 			li: a(href="#")  Ноутбуки 
+		//- 			li: a(href="#")  Аудиотехника 
+		//- 			li: a(href="#")  Автоэлектроника 
+		//- 			li: a(href="#")  Прочее 
