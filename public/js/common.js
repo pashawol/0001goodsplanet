@@ -1,11 +1,5 @@
 "use strict";
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
@@ -83,7 +77,9 @@ var JSCCommon = {
 		document.addEventListener('mouseup', function (event) {
 			var container = event.target.closest(".menu-mobile--js.active"); // (1)
 
-			if (!container) {
+			var container2 = event.target.closest(".toggle-menu-mobile--js.on"); // (1)
+
+			if (!container && !container2) {
 				_this.closeMenu();
 			}
 		});
@@ -177,97 +173,35 @@ function eventHandler() {
 		// autoplay: true,
 		autoplaySpeed: 6000,
 		lazyLoad: 'progressive'
-	};
-	$('.s-gal__slider--js').slick(_objectSpread({}, defaultSlide, {
-		slidesToShow: 1,
-		responsive: [{
-			breakpoint: 1200,
-			settings: {
-				slidesToShow: 4
-			}
-		}, {
-			breakpoint: 992,
-			settings: {
-				slidesToShow: 3
-			}
-		}, {
-			breakpoint: 576,
-			settings: {
-				slidesToShow: 2,
-				arrows: true
-			}
-		}]
-	})); // $('.s-gal__slider\
-	// ,.slider-for2 ')
-	// 	.on('lazyLoaded', function (event, slick, image, imageSource) {
-	// 		image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-	// 	});
-	// slider
-	// const swiper4 = new Swiper('.color-slider', {
-	// 	// slidesPerView: 5,
-	// 	slidesPerView: 'auto',
-	// 	watchOverflow: true,
-	// 	spaceBetween: 0,
-	// 	freeMode: true,
-	// 	watchOverflow: true,
-	// 	slidesPerGroup: 3,
-	// 	// centeredSlides: true,
-	// 	loop: true,
-	// 	loopFillGroupWithBlank: true,
-	// 	touchRatio: 0.2,
-	// 	slideToClickedSlide: true,
-	// 	freeModeMomentum: true,
-	// 	navigation: {
-	// 		nextEl: '.swiper-button-next',
-	// 		prevEl: '.swiper-button-prev',
-	// 	},
-	// });
-	// modal window
+	}; // slider
+
+	var swiper4 = new Swiper('.header-block__slider--js', {
+		// slidesPerView: 5,
+		slidesPerView: 1,
+		watchOverflow: true,
+		spaceBetween: 0,
+		loop: true,
+		pagination: {
+			el: '.header-block__pagination',
+			type: 'bullets',
+			clickable: true
+		}
+	}); // modal window
 	//    const wow = new WOW({ mobile: false });
 	//         wow.init();
+	//         wow.init();
 
-	var gets = function () {
-		var a = window.location.search;
-		var b = new Object();
-		var c;
-		a = a.substring(1).split("&");
-
-		for (var i = 0; i < a.length; i++) {
-			c = a[i].split("=");
-			b[c[0]] = c[1];
-		}
-
-		return b;
-	}(); // form
-
-
-	$("form").submit(function (e) {
-		e.preventDefault();
-		var th = $(this);
-		var data = th.serialize();
-		th.find('.utm_source').val(decodeURIComponent(gets['utm_source'] || ''));
-		th.find('.utm_term').val(decodeURIComponent(gets['utm_term'] || ''));
-		th.find('.utm_medium').val(decodeURIComponent(gets['utm_medium'] || ''));
-		th.find('.utm_campaign').val(decodeURIComponent(gets['utm_campaign'] || ''));
-		$.ajax({
-			url: 'action.php',
-			type: 'POST',
-			data: data
-		}).done(function (data) {
-			$.fancybox.close();
-			$.fancybox.open({
-				src: '#modal-thanks',
-				type: 'inline'
-			}); // window.location.replace("/thanks.html");
-
-			setTimeout(function () {
-				// Done Functions
-				th.trigger("reset"); // $.magnificPopup.close();
-				// ym(53383120, 'reachGoal', 'zakaz');
-				// yaCounter55828534.reachGoal('zakaz');
-			}, 4000);
-		}).fail(function () {});
+	$(".catalog-menu__toggle").click(function () {
+		$(this).parent().toggleClass('active');
 	});
+	$(".prod-item").hover(function () {
+		$(this).find(".prod-item__hover-show").fadeToggle(); // $(this).find(".prod-item__hover-hide").toggle();
+	}); // $(document).mouseup(function (e) {
+	// 	var container = $(".catalog-menu.active");
+	// 	if (container.has(e.target).length === 0) {
+	// 		container.removeClass('active');
+	// 	}
+	// });
 }
 
 ;

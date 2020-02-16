@@ -1,0 +1,20 @@
+mixin s-header-icons()
+	// start s-header-icons
+	+b.SECTION.s-header-icons&attributes(attributes)
+		.container 
+			.row
+				mixin item(i,t)
+					+e.item.col-lg-3.col-6 
+						+e.img-wrap
+							img.res-i(src=`img/svg/head-i-${i}.svg`, alt="")
+						block
+					// /+e.item.col-lg-3.col-6
+				+item("1",'')
+					+e.DIV.title Доставка в&nbsp;любую точку  Российской Федерации
+				+item("2",'')
+					+e.DIV.title Доступные цены  <br>  на&nbsp;все сегменты товаров
+				+item("3",'')
+					+e.DIV.title Гарантия качества  <br>  техники и&nbsp;аксессуаров
+				+item("4",'')
+					+e.DIV.title Поддержка <br> 7&nbsp;дней в&nbsp;неделю
+	// end s-header-icons

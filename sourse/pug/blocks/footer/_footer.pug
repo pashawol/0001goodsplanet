@@ -1,4 +1,88 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
+		+b.questions
+			.container
+				.row.justify-content-between
+					.col-md-auto 
+						h2 Есть вопросы? Звоните! 
+							a(href="tel:+7(916)900-2-999") +7 (916) 900-2-999
+					+e.messengers.col-md-4
+						h5 Наш магазин в месенджерах:
+						+e.links
+							a(href="#")
+								+icon('telegram')
+							a(href="#")
+								+icon('whatsapp')
 		.container
-			h2 footer
+			.row.justify-content-between.border-bottom
+				.col
+					+e.title Клиентам
+					ul
+						li 
+							a(href="#") Как сделать покупку
+						li 
+							a(href="#") Оплата 
+						li 
+							a(href="#") Вопрос-ответ
+						li 
+							a(href="#") О компании
+						li 
+							a(href="#") Возврат и замена товара
+						li 
+							a(href="#") Доставка 
+						li 
+							a(href="#") Гарантии
+				.col-md-6
+					+e.title Каталог
+					ul.catalog
+						li 
+							a(href="#") Мобильные телефоны 
+						li 
+							a(href="#") Аксессуары
+						li 
+							a(href="#") Планшеты
+						li 
+							a(href="#") Кабели и адаптеры
+						li 
+							a(href="#") Ноутбуки
+						li 
+							a(href="#") Носители 
+						li 
+							a(href="#") Манипуляторы
+						li 
+							a(href="#") Цифровое ТВ
+						li 
+							a(href="#") Аудиотехника
+						li 
+							a(href="#") Авто ауидио
+						li 
+							a(href="#") Электропитание
+						li 
+							a(href="#") Наблюдение
+				.col
+					+e.our-data
+						+e.schedule График работы: Понедельник — Пятница с 10:00 до 21:00
+						+e.mail
+							a(href="mailto:") sales@lego-market.ru
+						//- мне показался бр тут уместен
+						+e.gos-number ОГРН: 317507400034317
+				+e.img-wrap
+					img.planet-2(src="img/@2x/planet_2.png",  alt="")
+					img.planet-1(src="img/@2x/planet-1.png",  alt="")
+			+e.footer_foot.row.align-items-center
+				.col 
+					+e.rights-reserved © Все права защищены
+				.col-md-6
+					ul.catalog
+						li 
+							a(href="#") Политика конфиденциальности
+						li 
+							a(href="#") Обратная связь
+				.col.text-right
+					+e.soc
+						a(href="")
+							+icon('vk')
+						a(href="")
+							+icon('fb')
+						a(href="")
+							+icon('instagram')

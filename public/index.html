@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>Главная</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, shrink-to-fit=no">
@@ -19,7 +19,7 @@
 		<meta property="og:image:height" content="504">
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
-		<link rel="stylesheet" href="libs/slick-carousel/slick/slick.css"/>
+		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -27,104 +27,888 @@
 <script>!function(e,n,A){function o(e,n){return typeof e===n}function t(){var e,n,A,t,a,i,l;for(var f in r)if(r.hasOwnProperty(f)){if(e=[],n=r[f],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(A=0;A<n.options.aliases.length;A++)e.push(n.options.aliases[A].toLowerCase());for(t=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],l=i.split("."),1===l.length?Modernizr[l[0]]=t:(!Modernizr[l[0]]||Modernizr[l[0]]instanceof Boolean||(Modernizr[l[0]]=new Boolean(Modernizr[l[0]])),Modernizr[l[0]][l[1]]=t),s.push((t?"":"no-")+l.join("-"))}}function a(e){var n=u.className,A=Modernizr._config.classPrefix||"";if(c&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+A+"no-js(\\s|$)");n=n.replace(o,"$1"+A+"js$2")}Modernizr._config.enableClasses&&(n+=" "+A+e.join(" "+A),c?u.className.baseVal=n:u.className=n)}function i(e,n){if("object"==typeof e)for(var A in e)f(e,A)&&i(A,e[A]);else{e=e.toLowerCase();var o=e.split("."),t=Modernizr[o[0]];if(2==o.length&&(t=t[o[1]]),"undefined"!=typeof t)return Modernizr;n="function"==typeof n?n():n,1==o.length?Modernizr[o[0]]=n:(!Modernizr[o[0]]||Modernizr[o[0]]instanceof Boolean||(Modernizr[o[0]]=new Boolean(Modernizr[o[0]])),Modernizr[o[0]][o[1]]=n),a([(n&&0!=n?"":"no-")+o.join("-")]),Modernizr._trigger(e,n)}return Modernizr}var s=[],r=[],l={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var A=this;setTimeout(function(){n(A[e])},0)},addTest:function(e,n,A){r.push({name:e,fn:n,options:A})},addAsyncTest:function(e){r.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=l,Modernizr=new Modernizr;var f,u=n.documentElement,c="svg"===u.nodeName.toLowerCase();!function(){var e={}.hasOwnProperty;f=o(e,"undefined")||o(e.call,"undefined")?function(e,n){return n in e&&o(e.constructor.prototype[n],"undefined")}:function(n,A){return e.call(n,A)}}(),l._l={},l.on=function(e,n){this._l[e]||(this._l[e]=[]),this._l[e].push(n),Modernizr.hasOwnProperty(e)&&setTimeout(function(){Modernizr._trigger(e,Modernizr[e])},0)},l._trigger=function(e,n){if(this._l[e]){var A=this._l[e];setTimeout(function(){var e,o;for(e=0;e<A.length;e++)(o=A[e])(n)},0),delete this._l[e]}},Modernizr._q.push(function(){l.addTest=i}),Modernizr.addAsyncTest(function(){function e(e,n,A){function o(n){var o=n&&"load"===n.type?1==t.width:!1,a="webp"===e;i(e,a&&o?new Boolean(o):o),A&&A(n)}var t=new Image;t.onerror=o,t.onload=o,t.src=n}var n=[{uri:"data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=",name:"webp"},{uri:"data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==",name:"webp.alpha"},{uri:"data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA",name:"webp.animation"},{uri:"data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=",name:"webp.lossless"}],A=n.shift();e(A.name,A.uri,function(A){if(A&&"load"===A.type)for(var o=0;o<n.length;o++)e(n[o].name,n[o].uri)})}),t(),a(s),delete l.addTest,delete l.addAsyncTest;for(var p=0;p<Modernizr._q.length;p++)Modernizr._q[p]();e.Modernizr=Modernizr}(window,document);</script>
 <!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
-			<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-			</div>
-			<div class="menu-mobile menu-mobile--js d-lg-none">
-				<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-				</div>
-				<div class="menu-mobile__inner">
-					<ul class="menu-mobile__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="/" itemprop="url">Главная</a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Услуги  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Подбор септика   </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Акции </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> О компании  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Доставка и оплата </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Клиентам  </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url"> Наши работы   </a>
-						</li>
-						<li class="menu-mobile__item" itemprop="item"><a class="menu-mobile__link" href="#" itemprop="url">Контакты </a>
-						</li>
-					</ul>
-					<div class="text-right"></div>
-				</div>
-			</div>
 			<!--  мобильное меню-->
 			<!-- start HEADER.header-->
 			<header class="header block-with-lazy">
 				<!-- start .top-line-->
 				<div class="top-line block-with-lazy">
-					<div class="container">
-						<div class="row">top-line</div>
+					<div class="top-line__head">
+						<div class="container">
+							<div class="row">
+								<div class="col-auto d-lg-none">
+									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+									</div>
+								</div>
+								<div class="col">
+									<div class="top-line__menu d-lg-block menu-mobile menu-mobile menu-mobile--js">
+										<div class="menu-mobile__inner">
+											<div class="container">
+												<ul>
+													<li><a href="#">Как сделать покупку    </a></li>
+													<li><a href="#"> Оплата    </a></li>
+													<li><a href="#"> Вопрос-ответ    </a></li>
+													<li><a href="#"> О компании    </a></li>
+													<li><a href="#"> Возврат и замена товара    </a></li>
+													<li><a href="#"> Доставка    </a></li>
+													<li><a href="#"> Гарантии</a></li>
+												</ul>
+											</div>
+											<div class="top-line__foot d-lg-none">
+												<div class="container"><a class="top-line__tel" href="tel:+7(916)900-2-999">+7 (916) 900-2-999</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-auto">
+									<div class="top-line__lk">
+										<ul>
+											<li><a href="#">
+													<svg class="icon icon-user ">
+														<use xlink:href="img/svg/sprite.svg#user"></use>
+													</svg>Вход</a></li>
+											<li><a href="#">Регистрация</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="top-line__body">
+						<div class="container">
+							<div class="row">
+								<div class="col-sm-auto col"><a class="top-line__logo" href="#"><img src="img/svg/logo.svg" alt=""/></a>
+								</div>
+								<div class="col d-none d-sm-block">
+									<form class="search-block">
+										<button class="search-block__btn" type="button">
+											<svg class="icon icon-search ">
+												<use xlink:href="img/svg/sprite.svg#search"></use>
+											</svg>
+										</button><input class="search-block__control search-block__control--input" type="text" placeholder="Поиск по каталогу"/>
+										<select class="search-block__control search-block__control--select">
+											<option value="">Все категории</option>
+											<option value="">Телефоны</option>
+											<option value="">Планшеты</option>
+											<option value="">Ноутбуки</option>
+											<option value="">Аудиотехника</option>
+											<option value="">Автоэлектроника</option>
+										</select>
+									</form>
+								</div>
+								<div class="col-auto d-none d-lg-block"><a class="top-line__tel" href="tel:+7(916)900-2-999">+7 (916) 900-2-999</a>
+								</div>
+								<div class="col-auto">
+									<div class="top-line__basket">
+										<div class="top-line__count">10
+										</div>
+										<svg class="icon icon-basket ">
+											<use xlink:href="img/svg/sprite.svg#basket"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- end .top-line-->
 				<!-- start top-nav-->
-				<div class="top-nav block-with-lazy">
+				<div class="top-nav">
 					<div class="container">
-						<ul class="top-nav__nav" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="/" itemprop="url">Главная</a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Услуги  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Подбор септика   </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Акции </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> О компании  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Доставка и оплата </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Клиентам  </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url"> Наши работы   </a>
-							</li>
-							<li class="top-nav__item" itemprop="item"><a class="top-nav__link" href="#" itemprop="url">Контакты </a>
-							</li>
-						</ul>
+						<div class="row no-gutters">
+							<div class="col-lg-3">
+								<div class="catalog-menu">
+									<div class="catalog-menu__toggle">
+										<div class="catalog-menu__toggle-text"> <span></span>Каталог товаров
+										</div>
+									</div>
+									<div class="catalog-menu__dropdown">
+										<ul>
+											<li><a href="#" style="color: #88C057;">Телефоны</a>
+												<ul>
+													<li><a href="#">Смартфоны</a></li>
+													<li><a href="#">Мобильные телефоны</a></li>
+													<li><a href="#">Телефоны Apple</a></li>
+												</ul>
+											</li>
+											<li><a href="#" style="color: #4F4F4F;">Аксессуары</a>
+												<ul>
+													<li><a href="#">Карты памяти</a></li>
+													<li><a href="#">Аккумуляторы для телефонов</a></li>
+													<li><a href="#">Зарядные устройства</a></li>
+													<li><a href="#">Автомобильные держатели</a></li>
+													<li><a href="#">Чехлы для телефонов и кейсы</a></li>
+													<li><a href="#">Часы </a></li>
+												</ul>
+											</li>
+										</ul>
+										<ul class="d-lg-none">
+											<li><a href="#"> Планшеты </a></li>
+											<li><a href="#"> Ноутбуки </a></li>
+											<li><a href="#"> Аудиотехника </a></li>
+											<li><a href="#"> Автоэлектроника </a></li>
+											<li><a href="#"> Прочее </a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col d-none d-lg-block">
+								<div class="menu-top">
+									<ul> 
+										<li><a href="#"> Телефоны </a></li>
+										<li><a href="#"> Планшеты </a></li>
+										<li><a href="#"> Ноутбуки </a></li>
+										<li><a href="#"> Аудиотехника </a></li>
+										<li><a href="#"> Автоэлектроника </a></li>
+										<li><a href="#"> Прочее </a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- end top-nav-->
 			</header>
 			<!-- end HEADER.header-->
-			<!-- start header-block-->
-			<div class="header-block" id="header-block">
-				<div class="container">
-					<h1>header-block</h1>
-					<div class="row"></div>
-				</div>
-			</div>
-			<!-- end header-block-->
-			<!-- start s-form-->
-			<div class="s-form section block-with-lazy" id="s-form">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>s-form</h2>
+			<div class="bg-light">
+				<!-- start header-block-->
+				<div class="header-block" id="header-block">
+					<div class="container">
+						<div class="header-block__slider header-block__slider--js swiper-container">
+							<div class="swiper-wrapper">
+								<div class="header-block__slide swiper-slide bg-wrap" style="color: #fff"><img class="object-fit-js img-bg" src="img/@2x/banner.jpg" alt=""/>
+									<div class="header-block__title"> Заголовок Банера в&nbsp;две&nbsp;строки Intro Black
+									</div>
+									<p>Приобретение электроники и техники бытового назначения </p><a class="header-block__btn" href="#">Подробнее...</a>
+								</div>
+								<div class="header-block__slide swiper-slide bg-wrap" style="color: #fff"><img class="object-fit-js img-bg" src="img/@2x/banner.jpg" alt=""/>
+									<div class="header-block__title"> Заголовок Банера в&nbsp;две&nbsp;строки Intro Black
+									</div>
+									<p>Приобретение электроники и техники бытового назначения </p><a class="header-block__btn" href="#">Подробнее...</a>
+								</div>
+								<div class="header-block__slide swiper-slide bg-wrap" style="color: #fff"><img class="object-fit-js img-bg" src="img/@2x/banner.jpg" alt=""/>
+									<div class="header-block__title"> Заголовок Банера в&nbsp;две&nbsp;строки Intro Black
+									</div>
+									<p>Приобретение электроники и техники бытового назначения </p><a class="header-block__btn" href="#">Подробнее...</a>
+								</div>
+							</div>
+							<div class="header-block__pagination swiper-pagination">
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
 				</div>
-			</div>
-			<!-- end s-form-->
-			<!-- start s-contact-->
-			<div class="s-contact section block-with-lazy" id="s-contact">
-				<div class="container">
-					<div class="section-title text-center">
-						<h2>s-contact</h2>
+				<!-- end header-block-->
+				<!-- start s-category-->
+				<section class="s-category">
+					<div class="container"> 
+						<div class="row">
+									<div class="s-category__col col-md-4"><a class="s-category__item bg-wrap" href="#"><img class="object-fit-js img-bg" src="img/@2x/cat-1.jpg" alt=""/>
+										<div class="s-category__title">Все смартфоны APPLE в наличии
+										</div></a>
+									</div>
+									<!-- /+e.col.col-md-4-->
+									<div class="s-category__col col-md-4"><a class="s-category__item bg-wrap" href="#"><img class="object-fit-js img-bg" src="img/@2x/cat-2.jpg" alt=""/>
+										<div class="s-category__title">Беспроводные наушники от  ведущих брендов
+										</div></a>
+									</div>
+									<!-- /+e.col.col-md-4-->
+									<div class="s-category__col col-md-4"><a class="s-category__item bg-wrap" href="#"><img class="object-fit-js img-bg" src="img/@2x/cat-3.jpg" alt=""/>
+										<div class="s-category__title">FM Трансмитеры на любой вкус
+										</div></a>
+									</div>
+									<!-- /+e.col.col-md-4-->
+						</div>
 					</div>
-					<div class="row"></div>
+				</section>
+				<!-- end s-category-->
+				<!-- start s-header-icons-->
+				<section class="s-header-icons">
+					<div class="container"> 
+						<div class="row">
+									<div class="s-header-icons__item col-lg-3 col-6"> 
+										<div class="s-header-icons__img-wrap"><img class="res-i" src="img/svg/head-i-1.svg" alt=""/>
+										</div>
+										<div class="s-header-icons__title">Доставка в&nbsp;любую точку  Российской Федерации
+										</div>
+									</div>
+									<!-- /+e.item.col-lg-3.col-6-->
+									<div class="s-header-icons__item col-lg-3 col-6"> 
+										<div class="s-header-icons__img-wrap"><img class="res-i" src="img/svg/head-i-2.svg" alt=""/>
+										</div>
+										<div class="s-header-icons__title">Доступные цены  <br>  на&nbsp;все сегменты товаров
+										</div>
+									</div>
+									<!-- /+e.item.col-lg-3.col-6-->
+									<div class="s-header-icons__item col-lg-3 col-6"> 
+										<div class="s-header-icons__img-wrap"><img class="res-i" src="img/svg/head-i-3.svg" alt=""/>
+										</div>
+										<div class="s-header-icons__title">Гарантия качества  <br>  техники и&nbsp;аксессуаров
+										</div>
+									</div>
+									<!-- /+e.item.col-lg-3.col-6-->
+									<div class="s-header-icons__item col-lg-3 col-6"> 
+										<div class="s-header-icons__img-wrap"><img class="res-i" src="img/svg/head-i-4.svg" alt=""/>
+										</div>
+										<div class="s-header-icons__title">Поддержка <br> 7&nbsp;дней в&nbsp;неделю
+										</div>
+									</div>
+									<!-- /+e.item.col-lg-3.col-6-->
+						</div>
+					</div>
+				</section>
+				<!-- end s-header-icons-->
+			</div>
+			<!-- start s-catalog-->
+			<section class="s-catalog section" id="s-catalog">
+				<div class="container">
+					<div class="section-title">
+						<div class="row">
+							<div class="col-auto"><img src="img/svg/best.svg" alt=""/></div>
+							<div class="col">
+								<h2>Лучшие предложения</h2>
+							</div>
+							<div class="col-auto d-none d-lg-block"><a class="section-title__btn" href="#">Смотреть все</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-catalog__row row">
+						<div class="s-catalog__col col-lg-3 col-6">
+							<div class="prod-item">
+								<div class="prod-item__labels">
+									<div class="d32 bg-success">
+										<div class="d32__inner"><img src="img/svg/best.svg" alt=""/>
+										</div>
+									</div>
+								</div><a class="prod-item__img-wrap" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/prod-1.jpg" alt=""/></a>
+								<div class="prod-item__title"><a href="#">СЗУ Navitoch 2A iPhone 6</a>
+								</div>
+								<div class="prod-item__price-wrap prod-item__hover-hide"> 
+									<div class="prod-item__price text-primary">649.60 ₽
+									</div>
+								</div>
+								<div class="prod-item__hover-show">
+									<div class="prod-item__caption"> 
+										<div class="prod-item__caption-item"><span>Разрешение дисплея пикс:</span> 1280x720
+										</div>
+										<div class="prod-item__caption-item"><span>Сенсорный дисплей:</span> Да
+										</div>
+										<div class="prod-item__caption-item"><span>Производитель:</span> BQ
+										</div>
+										<div class="prod-item__caption-item"><span>Операционная система:</span> Android 6.0
+										</div>
+										<div class="prod-item__caption-item"><span>Тип корпуса:</span> классический
+										</div>
+										<div class="prod-item__caption-item"><span>Количество ядер процессора:</span> 4
+										</div>
+										<div class="prod-item__caption-item"><span>Модель телефона:</span> 5020 Strike
+										</div>
+									</div>
+									<div class="prod-item__price-wrap text-left">
+										<div class="row">
+											<div class="col">
+												<div class="prod-item__price text-primary">649.60 ₽
+												</div>
+											</div>
+											<div class="col-auto"><a class="prod-item__btn-basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div><a class="prod-item__modal" href="#">
+									<svg class="icon icon-click ">
+										<use xlink:href="img/svg/sprite.svg#click"></use>
+									</svg>Купить в один клик</a>
+								</div>
+							</div>
+							<!-- /+b.prod-item-->
+						</div>
+						<div class="s-catalog__col col-lg-3 col-6">
+							<div class="prod-item">
+								<div class="prod-item__labels">
+									<div class="d32 bg-success">
+										<div class="d32__inner"><img src="img/svg/best.svg" alt=""/>
+										</div>
+									</div>
+									<div class="d32 bg-primary">
+										<div class="d32__inner"><img src="img/svg/sale.svg" alt=""/>
+										</div>
+									</div>
+								</div><a class="prod-item__img-wrap" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/prod-2.jpg" alt=""/></a>
+								<div class="prod-item__title"><a href="#">Смартфон BQ 5020 Strike Red</a>
+								</div>
+								<div class="prod-item__price-wrap prod-item__hover-hide"> 
+									<div class="prod-item__price prod-item__price--old">4 964.80 ₽
+									</div>
+									<div class="prod-item__price text-success">4 964.80 ₽
+									</div>
+								</div>
+								<div class="prod-item__hover-show">
+									<div class="prod-item__caption"> 
+										<div class="prod-item__caption-item"><span>Разрешение дисплея пикс:</span> 1280x720
+										</div>
+										<div class="prod-item__caption-item"><span>Сенсорный дисплей:</span> Да
+										</div>
+										<div class="prod-item__caption-item"><span>Производитель:</span> BQ
+										</div>
+										<div class="prod-item__caption-item"><span>Операционная система:</span> Android 6.0
+										</div>
+										<div class="prod-item__caption-item"><span>Тип корпуса:</span> классический
+										</div>
+										<div class="prod-item__caption-item"><span>Количество ядер процессора:</span> 4
+										</div>
+										<div class="prod-item__caption-item"><span>Модель телефона:</span> 5020 Strike
+										</div>
+									</div>
+									<div class="prod-item__price-wrap text-left">
+										<div class="row">
+											<div class="col">
+												<div class="prod-item__price prod-item__price--old">4 964.80 ₽
+												</div>
+												<div class="prod-item__price text-success">4 964.80 ₽
+												</div>
+											</div>
+											<div class="col-auto"><a class="prod-item__btn-basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div><a class="prod-item__modal" href="#">
+									<svg class="icon icon-click ">
+										<use xlink:href="img/svg/sprite.svg#click"></use>
+									</svg>Купить в один клик</a>
+								</div>
+							</div>
+							<!-- /+b.prod-item-->
+						</div>
+						<div class="s-catalog__col col-lg-3 col-6">
+							<div class="prod-item">
+								<div class="prod-item__labels">
+									<div class="d32 bg-success">
+										<div class="d32__inner"><img src="img/svg/best.svg" alt=""/>
+										</div>
+									</div>
+								</div><a class="prod-item__img-wrap" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/prod-3.jpg" alt=""/></a>
+								<div class="prod-item__title"><a href="#">Телефон BQ 1406 Vitre Gold Edition Red</a>
+								</div>
+								<div class="prod-item__price-wrap prod-item__hover-hide"> 
+									<div class="prod-item__price text-primary">649.60 ₽
+									</div>
+								</div>
+								<div class="prod-item__hover-show">
+									<div class="prod-item__caption"> 
+										<div class="prod-item__caption-item"><span>Разрешение дисплея пикс:</span> 1280x720
+										</div>
+										<div class="prod-item__caption-item"><span>Сенсорный дисплей:</span> Да
+										</div>
+										<div class="prod-item__caption-item"><span>Производитель:</span> BQ
+										</div>
+										<div class="prod-item__caption-item"><span>Операционная система:</span> Android 6.0
+										</div>
+										<div class="prod-item__caption-item"><span>Тип корпуса:</span> классический
+										</div>
+										<div class="prod-item__caption-item"><span>Количество ядер процессора:</span> 4
+										</div>
+										<div class="prod-item__caption-item"><span>Модель телефона:</span> 5020 Strike
+										</div>
+									</div>
+									<div class="prod-item__price-wrap text-left">
+										<div class="row">
+											<div class="col">
+												<div class="prod-item__price text-primary">649.60 ₽
+												</div>
+											</div>
+											<div class="col-auto"><a class="prod-item__btn-basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div><a class="prod-item__modal" href="#">
+									<svg class="icon icon-click ">
+										<use xlink:href="img/svg/sprite.svg#click"></use>
+									</svg>Купить в один клик</a>
+								</div>
+							</div>
+							<!-- /+b.prod-item-->
+						</div>
+						<div class="s-catalog__col col-lg-3 col-6">
+							<div class="prod-item">
+								<div class="prod-item__labels">
+									<div class="d32 bg-success">
+										<div class="d32__inner"><img src="img/svg/best.svg" alt=""/>
+										</div>
+									</div>
+								</div><a class="prod-item__img-wrap" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/prod-4.jpg" alt=""/></a>
+								<div class="prod-item__title"><a href="#">Радар-детектор PROLOGY iScan-3050</a>
+								</div>
+								<div class="prod-item__price-wrap prod-item__hover-hide"> 
+									<div class="prod-item__price text-primary">4 640 ₽
+									</div>
+								</div>
+								<div class="prod-item__hover-show">
+									<div class="prod-item__caption"> 
+										<div class="prod-item__caption-item"><span>Разрешение дисплея пикс:</span> 1280x720
+										</div>
+										<div class="prod-item__caption-item"><span>Сенсорный дисплей:</span> Да
+										</div>
+										<div class="prod-item__caption-item"><span>Производитель:</span> BQ
+										</div>
+										<div class="prod-item__caption-item"><span>Операционная система:</span> Android 6.0
+										</div>
+										<div class="prod-item__caption-item"><span>Тип корпуса:</span> классический
+										</div>
+										<div class="prod-item__caption-item"><span>Количество ядер процессора:</span> 4
+										</div>
+										<div class="prod-item__caption-item"><span>Модель телефона:</span> 5020 Strike
+										</div>
+									</div>
+									<div class="prod-item__price-wrap text-left">
+										<div class="row">
+											<div class="col">
+												<div class="prod-item__price text-primary">4 640 ₽
+												</div>
+											</div>
+											<div class="col-auto"><a class="prod-item__btn-basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div><a class="prod-item__modal" href="#">
+									<svg class="icon icon-click ">
+										<use xlink:href="img/svg/sprite.svg#click"></use>
+									</svg>Купить в один клик</a>
+								</div>
+							</div>
+							<!-- /+b.prod-item-->
+						</div>
+					</div>
+					<div class="text-center d-lg-none"><a class="s-catalog__btn" href="#">Смотреть все</a>
+					</div>
+				</div>
+			</section>
+			<!-- end s-catalog-->
+			<!-- start s-catalog-->
+			<section class="s-catalog pt-0" id="s-catalog">
+				<div class="container">
+					<div class="section-title">
+						<div class="row">
+							<div class="col-auto"><img src="img/svg/sale.svg" alt=""/></div>
+							<div class="col">
+								<h2>Скидки</h2>
+							</div>
+							<div class="col-auto d-none d-lg-block"><a class="section-title__btn" href="#">Смотреть все</a>
+							</div>
+						</div>
+					</div>
+					<div class="s-catalog__row row">
+						<div class="s-catalog__col col-lg-3 col-6">
+							<div class="prod-item">
+								<div class="prod-item__labels">
+									<div class="d32 bg-primary">
+										<div class="d32__inner"><img src="img/svg/sale.svg" alt=""/>
+										</div>
+									</div>
+								</div><a class="prod-item__img-wrap" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/prod-5.jpg" alt=""/></a>
+								<div class="prod-item__title"><a href="#">СЗУ Navitoch 2A iPhone 6</a>
+								</div>
+								<div class="prod-item__price-wrap prod-item__hover-hide"> 
+									<div class="prod-item__price prod-item__price--old">649.60 ₽
+									</div>
+									<div class="prod-item__price text-success">197.20 ₽
+									</div>
+								</div>
+								<div class="prod-item__hover-show">
+									<div class="prod-item__caption"> 
+										<div class="prod-item__caption-item"><span>Разрешение дисплея пикс:</span> 1280x720
+										</div>
+										<div class="prod-item__caption-item"><span>Сенсорный дисплей:</span> Да
+										</div>
+										<div class="prod-item__caption-item"><span>Производитель:</span> BQ
+										</div>
+										<div class="prod-item__caption-item"><span>Операционная система:</span> Android 6.0
+										</div>
+										<div class="prod-item__caption-item"><span>Тип корпуса:</span> классический
+										</div>
+										<div class="prod-item__caption-item"><span>Количество ядер процессора:</span> 4
+										</div>
+										<div class="prod-item__caption-item"><span>Модель телефона:</span> 5020 Strike
+										</div>
+									</div>
+									<div class="prod-item__price-wrap text-left">
+										<div class="row">
+											<div class="col">
+												<div class="prod-item__price prod-item__price--old">649.60 ₽
+												</div>
+												<div class="prod-item__price text-success">197.20 ₽
+												</div>
+											</div>
+											<div class="col-auto"><a class="prod-item__btn-basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div><a class="prod-item__modal" href="#">
+									<svg class="icon icon-click ">
+										<use xlink:href="img/svg/sprite.svg#click"></use>
+									</svg>Купить в один клик</a>
+								</div>
+							</div>
+							<!-- /+b.prod-item-->
+						</div>
+						<div class="s-catalog__col col-lg-3 col-6">
+							<div class="prod-item">
+								<div class="prod-item__labels">
+									<div class="d32 bg-primary">
+										<div class="d32__inner"><img src="img/svg/sale.svg" alt=""/>
+										</div>
+									</div>
+								</div><a class="prod-item__img-wrap" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/prod-6.jpg" alt=""/></a>
+								<div class="prod-item__title"><a href="#">Смартфон BQ 5020 Strike Red</a>
+								</div>
+								<div class="prod-item__price-wrap prod-item__hover-hide"> 
+									<div class="prod-item__price prod-item__price--old">4 964.80 ₽
+									</div>
+									<div class="prod-item__price text-success">4 964.80 ₽
+									</div>
+								</div>
+								<div class="prod-item__hover-show">
+									<div class="prod-item__caption"> 
+										<div class="prod-item__caption-item"><span>Разрешение дисплея пикс:</span> 1280x720
+										</div>
+										<div class="prod-item__caption-item"><span>Сенсорный дисплей:</span> Да
+										</div>
+										<div class="prod-item__caption-item"><span>Производитель:</span> BQ
+										</div>
+										<div class="prod-item__caption-item"><span>Операционная система:</span> Android 6.0
+										</div>
+										<div class="prod-item__caption-item"><span>Тип корпуса:</span> классический
+										</div>
+										<div class="prod-item__caption-item"><span>Количество ядер процессора:</span> 4
+										</div>
+										<div class="prod-item__caption-item"><span>Модель телефона:</span> 5020 Strike
+										</div>
+									</div>
+									<div class="prod-item__price-wrap text-left">
+										<div class="row">
+											<div class="col">
+												<div class="prod-item__price prod-item__price--old">4 964.80 ₽
+												</div>
+												<div class="prod-item__price text-success">4 964.80 ₽
+												</div>
+											</div>
+											<div class="col-auto"><a class="prod-item__btn-basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div><a class="prod-item__modal" href="#">
+									<svg class="icon icon-click ">
+										<use xlink:href="img/svg/sprite.svg#click"></use>
+									</svg>Купить в один клик</a>
+								</div>
+							</div>
+							<!-- /+b.prod-item-->
+						</div>
+						<div class="s-catalog__col col-lg-3 col-6">
+							<div class="prod-item">
+								<div class="prod-item__labels">
+									<div class="d32 bg-primary">
+										<div class="d32__inner"><img src="img/svg/sale.svg" alt=""/>
+										</div>
+									</div>
+								</div><a class="prod-item__img-wrap" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/prod-7.jpg" alt=""/></a>
+								<div class="prod-item__title"><a href="#">Телефон BQ 1406 Vitre Gold Edition Red</a>
+								</div>
+								<div class="prod-item__price-wrap prod-item__hover-hide"> 
+									<div class="prod-item__price prod-item__price--old">649.60 ₽
+									</div>
+									<div class="prod-item__price text-success">197.20 ₽
+									</div>
+								</div>
+								<div class="prod-item__hover-show">
+									<div class="prod-item__caption"> 
+										<div class="prod-item__caption-item"><span>Разрешение дисплея пикс:</span> 1280x720
+										</div>
+										<div class="prod-item__caption-item"><span>Сенсорный дисплей:</span> Да
+										</div>
+										<div class="prod-item__caption-item"><span>Производитель:</span> BQ
+										</div>
+										<div class="prod-item__caption-item"><span>Операционная система:</span> Android 6.0
+										</div>
+										<div class="prod-item__caption-item"><span>Тип корпуса:</span> классический
+										</div>
+										<div class="prod-item__caption-item"><span>Количество ядер процессора:</span> 4
+										</div>
+										<div class="prod-item__caption-item"><span>Модель телефона:</span> 5020 Strike
+										</div>
+									</div>
+									<div class="prod-item__price-wrap text-left">
+										<div class="row">
+											<div class="col">
+												<div class="prod-item__price prod-item__price--old">649.60 ₽
+												</div>
+												<div class="prod-item__price text-success">197.20 ₽
+												</div>
+											</div>
+											<div class="col-auto"><a class="prod-item__btn-basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div><a class="prod-item__modal" href="#">
+									<svg class="icon icon-click ">
+										<use xlink:href="img/svg/sprite.svg#click"></use>
+									</svg>Купить в один клик</a>
+								</div>
+							</div>
+							<!-- /+b.prod-item-->
+						</div>
+						<div class="s-catalog__col col-lg-3 col-6">
+							<div class="prod-item">
+								<div class="prod-item__labels">
+									<div class="d32 bg-primary">
+										<div class="d32__inner"><img src="img/svg/sale.svg" alt=""/>
+										</div>
+									</div>
+								</div><a class="prod-item__img-wrap" href="#"><img class="res-i lazy" src="#" data-src="img/@2x/prod-8.jpg" alt=""/></a>
+								<div class="prod-item__title"><a href="#">Радар-детектор PROLOGY iScan-3050</a>
+								</div>
+								<div class="prod-item__price-wrap prod-item__hover-hide"> 
+									<div class="prod-item__price prod-item__price--old">649.60 ₽
+									</div>
+									<div class="prod-item__price text-success">197.20 ₽
+									</div>
+								</div>
+								<div class="prod-item__hover-show">
+									<div class="prod-item__caption"> 
+										<div class="prod-item__caption-item"><span>Разрешение дисплея пикс:</span> 1280x720
+										</div>
+										<div class="prod-item__caption-item"><span>Сенсорный дисплей:</span> Да
+										</div>
+										<div class="prod-item__caption-item"><span>Производитель:</span> BQ
+										</div>
+										<div class="prod-item__caption-item"><span>Операционная система:</span> Android 6.0
+										</div>
+										<div class="prod-item__caption-item"><span>Тип корпуса:</span> классический
+										</div>
+										<div class="prod-item__caption-item"><span>Количество ядер процессора:</span> 4
+										</div>
+										<div class="prod-item__caption-item"><span>Модель телефона:</span> 5020 Strike
+										</div>
+									</div>
+									<div class="prod-item__price-wrap text-left">
+										<div class="row">
+											<div class="col">
+												<div class="prod-item__price prod-item__price--old">649.60 ₽
+												</div>
+												<div class="prod-item__price text-success">197.20 ₽
+												</div>
+											</div>
+											<div class="col-auto"><a class="prod-item__btn-basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg></a>
+											</div>
+										</div>
+									</div><a class="prod-item__modal" href="#">
+									<svg class="icon icon-click ">
+										<use xlink:href="img/svg/sprite.svg#click"></use>
+									</svg>Купить в один клик</a>
+								</div>
+							</div>
+							<!-- /+b.prod-item-->
+						</div>
+					</div>
+					<div class="text-center d-lg-none"><a class="s-catalog__btn" href="#">Смотреть все</a>
+					</div>
+				</div>
+			</section>
+			<!-- start s-content-->
+			<div class="s-content section bg-light">
+				<div class="container">
+					<div class="section-title">
+						<h2>Интернет-магазин электроники <span class="text-success">goods</span><span class="text-primary">planet</span></h2>
+					</div>
+					<div class="row">
+						<div class="col">
+							<p>Приобретение электроники и техники бытового назначения в интернет-магазинах становится все более востребованным среди покупателей. Это связано не только с широким ассортиментом предлагаемых позиций, но также и с тем, что стоимость товара здесь значительно ниже.</p>
+							<p>Наш интернет-магазин электроники Lego-market.ru предлагает широкий выбор бытовой техники различного назначения, аксессуаров, авто электроники и других товаров, необходимых для комфортной жизни современному человеку.</p>
+						</div>
+						<div class="col-lg-4">
+							<p>В&nbsp;нашем интернет-каталоге Вы&nbsp;можете в&nbsp;любое время выбрать для себя:</p>
+							<ul>
+								<li><strong>Телефоны и аксессуары</strong></li>
+								<li><strong>Бытовую электронику</strong></li>
+								<li><strong>Авто электронику</strong></li>
+							</ul>
+							<p>И многое другое...</p>
+						</div>
+					</div><a class="s-content__btn" href="#">Узнать больше</a>
 				</div>
 			</div>
-			<!-- end s-contact-->
+			<!-- end s-content-->
+			<!-- start s-blog-->
+			<section class="s-blog section" id="s-blog">
+				<div class="container">
+					<div class="section-title">
+						<div class="row">
+							<div class="col">
+								<h2><span class="text-success">goods</span><span class="text-primary">planet</span> Блог</h2>
+							</div>
+							<div class="col-auto d-none d-lg-block"><a class="section-title__btn" href="#">Читать все</a>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+								<div class="s-blog__col col-lg-4 col-md-6">
+									<div class="s-blog__item">
+										<div class="s-blog__img-wrap bg-wrap"><img class="img-bg lazy object-fit-js" src="#" data-src="img/@2x/blog-1.jpg" alt=""/>
+										</div>
+										<div class="s-blog__caption">
+											<div class="s-blog__title"><a href="#">Чтобы оформить заказ на интересующее Вас товарное предложение необходимо выполнить</a>
+											</div>
+											<div class="s-blog__text">
+												<p>В правой части страницы находится конфигуратор, при помощи которого можно производить удобный подбор товара по ценеПроцедура регистрации очень проста. Вам требуется ввести свою электронную почту и мобильный телефон и нажать кнопку «Продолжить и войти в корзину» система автоматически создаст пользователя и на указанный Вами электронный адрес Вам придут </p>
+											</div>
+											<div class="s-blog__date">15.01.2020
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="s-blog__col col-lg-4 col-md-6">
+									<div class="s-blog__item">
+										<div class="s-blog__img-wrap bg-wrap"><img class="img-bg lazy object-fit-js" src="#" data-src="img/@2x/blog-2.jpg" alt=""/>
+										</div>
+										<div class="s-blog__caption">
+											<div class="s-blog__title"><a href="#">Чтобы оформить заказ на интересующее Вас товарное предложение необходимо выполнить</a>
+											</div>
+											<div class="s-blog__text">
+												<p>В правой части страницы находится конфигуратор, при помощи которого можно производить удобный подбор товара по ценеПроцедура регистрации очень проста. Вам требуется ввести свою электронную почту и мобильный телефон и нажать кнопку «Продолжить и войти в корзину» система автоматически создаст пользователя и на указанный Вами электронный адрес Вам придут </p>
+											</div>
+											<div class="s-blog__date">15.01.2020
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="s-blog__col col-lg-4 col-md-6">
+									<div class="s-blog__item">
+										<div class="s-blog__img-wrap bg-wrap"><img class="img-bg lazy object-fit-js" src="#" data-src="img/@2x/blog-3.jpg" alt=""/>
+										</div>
+										<div class="s-blog__caption">
+											<div class="s-blog__title"><a href="#">Чтобы оформить заказ на интересующее Вас товарное предложение необходимо выполнить</a>
+											</div>
+											<div class="s-blog__text">
+												<p>В правой части страницы находится конфигуратор, при помощи которого можно производить удобный подбор товара по ценеПроцедура регистрации очень проста. Вам требуется ввести свою электронную почту и мобильный телефон и нажать кнопку «Продолжить и войти в корзину» система автоматически создаст пользователя и на указанный Вами электронный адрес Вам придут </p>
+											</div>
+											<div class="s-blog__date">15.01.2020
+											</div>
+										</div>
+									</div>
+								</div>
+					</div>
+					<div class="text-center d-lg-none"><a class="s-blog__btn" href="#">Читать все</a>
+					</div>
+				</div>
+			</section>
+			<!-- end s-blog-->
 			<footer class="footer block-with-lazy">
+				<div class="questions">
+					<div class="container">
+						<div class="row justify-content-between">
+							<div class="col-md-auto"> 
+								<h2>Есть вопросы? Звоните! <a href="tel:+7(916)900-2-999">+7 (916) 900-2-999</a></h2>
+							</div>
+							<div class="questions__messengers col-md-4">
+								<h5>Наш магазин в месенджерах:</h5>
+								<div class="questions__links"><a href="#">
+										<svg class="icon icon-telegram ">
+											<use xlink:href="img/svg/sprite.svg#telegram"></use>
+										</svg></a><a href="#">
+										<svg class="icon icon-whatsapp ">
+											<use xlink:href="img/svg/sprite.svg#whatsapp"></use>
+										</svg></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div class="container">
-					<h2>footer</h2>
+					<div class="row justify-content-between border-bottom">
+						<div class="col">
+							<div class="footer__title">Клиентам
+							</div>
+							<ul>
+								<li> <a href="#">Как сделать покупку</a></li>
+								<li> <a href="#">Оплата </a></li>
+								<li> <a href="#">Вопрос-ответ</a></li>
+								<li> <a href="#">О компании</a></li>
+								<li> <a href="#">Возврат и замена товара</a></li>
+								<li> <a href="#">Доставка </a></li>
+								<li> <a href="#">Гарантии</a></li>
+							</ul>
+						</div>
+						<div class="col-md-6">
+							<div class="footer__title">Каталог
+							</div>
+							<ul class="catalog">
+								<li> <a href="#">Мобильные телефоны </a></li>
+								<li> <a href="#">Аксессуары</a></li>
+								<li> <a href="#">Планшеты</a></li>
+								<li> <a href="#">Кабели и адаптеры</a></li>
+								<li> <a href="#">Ноутбуки</a></li>
+								<li> <a href="#">Носители </a></li>
+								<li> <a href="#">Манипуляторы</a></li>
+								<li> <a href="#">Цифровое ТВ</a></li>
+								<li> <a href="#">Аудиотехника</a></li>
+								<li> <a href="#">Авто ауидио</a></li>
+								<li> <a href="#">Электропитание</a></li>
+								<li> <a href="#">Наблюдение</a></li>
+							</ul>
+						</div>
+						<div class="col">
+							<div class="footer__our-data">
+								<div class="footer__schedule">График работы: Понедельник — Пятница с 10:00 до 21:00
+								</div>
+								<div class="footer__mail"><a href="mailto:">sales@lego-market.ru</a>
+								</div>
+								<div class="footer__gos-number">ОГРН: 317507400034317
+								</div>
+							</div>
+						</div>
+						<div class="footer__img-wrap"><img class="planet-2" src="img/@2x/planet_2.png" alt=""/><img class="planet-1" src="img/@2x/planet-1.png" alt=""/>
+						</div>
+					</div>
+					<div class="footer__footer_foot row align-items-center">
+						<div class="col"> 
+							<div class="footer__rights-reserved">© Все права защищены
+							</div>
+						</div>
+						<div class="col-md-6">
+							<ul class="catalog">
+								<li> <a href="#">Политика конфиденциальности</a></li>
+								<li> <a href="#">Обратная связь</a></li>
+							</ul>
+						</div>
+						<div class="col text-right">
+							<div class="footer__soc"><a href="">
+									<svg class="icon icon-vk ">
+										<use xlink:href="img/svg/sprite.svg#vk"></use>
+									</svg></a><a href="">
+									<svg class="icon icon-fb ">
+										<use xlink:href="img/svg/sprite.svg#fb"></use>
+									</svg></a><a href="">
+									<svg class="icon icon-instagram ">
+										<use xlink:href="img/svg/sprite.svg#instagram"></use>
+									</svg></a>
+							</div>
+						</div>
+					</div>
 				</div>
 			</footer>
 		</div>
@@ -167,7 +951,7 @@
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->
 		<!-- slider libs-->
-		<script src="libs/slick-carousel/slick/slick.min.js"></script>
+		<script src="libs/swiper/js/swiper.min.js"></script>
 		<!-- /slider libs-->
 		<!-- for svg libs-->
 		<script src="libs/svg4everybody/svg4everybody.min.js"></script>

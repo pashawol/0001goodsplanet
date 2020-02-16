@@ -1,0 +1,29 @@
+mixin s-blog()
+	// start s-blog
+	+b.SECTION.s-blog.section#s-blog&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					.col
+						h2 #[span.text-success goods]#[span.text-primary planet] Блог
+					.col-auto.d-none.d-lg-block
+						+e.btn(href="#") Читать все
+				
+			.row
+				mixin item(i)
+					+e.col.col-lg-4.col-md-6
+						+e.item
+							+e.img-wrap.bg-wrap
+								img.img-bg.lazy.object-fit-js(src="#" data-src=`img/@2x/blog-${i}.jpg`, alt="")
+							+e.caption
+								+e.title
+									a(href="#") Чтобы оформить заказ на интересующее Вас товарное предложение необходимо выполнить
+								+e.text
+									p В правой части страницы находится конфигуратор, при помощи которого можно производить удобный подбор товара по ценеПроцедура регистрации очень проста. Вам требуется ввести свою электронную почту и мобильный телефон и нажать кнопку «Продолжить и войти в корзину» система автоматически создаст пользователя и на указанный Вами электронный адрес Вам придут 
+								+e.date 15.01.2020
+				+item("1")
+				+item("2")
+				+item("3")
+			.text-center.d-lg-none
+						+e.btn(href="#") Читать все
+	// end s-blog

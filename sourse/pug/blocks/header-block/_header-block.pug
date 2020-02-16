@@ -2,6 +2,13 @@ mixin header-block()
 	// start header-block
 	+b.header-block#header-block
 		.container
-			h1 header-block
-			.row
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					- for (var x = 0; x < 3; x++)
+						+e.slide.swiper-slide.bg-wrap(style="color: #fff")
+							img.object-fit-js.img-bg(src="img/@2x/banner.jpg", alt="")
+							+e.title  Заголовок Банера в&nbsp;две&nbsp;строки Intro Black
+							p Приобретение электроники и техники бытового назначения 
+							+e.btn(href="#") Подробнее...
+				+e.pagination.swiper-pagination
 	// end header-block

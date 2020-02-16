@@ -12,31 +12,51 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0;
+	background-position: center -4px;
 	opacity: 0;
-	// opacity: 0.7;
+	opacity: 0.7;
 }
 
 body,
 html {
-	font-size: $em-base;
+	min-height: 3000px;
+
+	@include media-breakpoint-up(md) {
+
+		font-size: $em-base;
+	}
+
+	font-size: 14px;
 	// @include font-size(1rem);
 }
 
 .section {
 	@include bgs;
-	padding-top: rem(40px);
-	padding-bottom: rem(40px);
+	padding-top: rem(50px);
+	padding-bottom: rem(30px);
+
 }
 
 .section-title {
-	@extend .h2;
-	padding-bottom: em(10);
+	padding-bottom: rem(22);
+	vertical-align: middle;
 
-	>h2 {
-		font-size: inherit;
+	.row {
+		@include roww(5);
+	}
+
+	h2 {
+		font-weight: bold;
 
 		@include media-breakpoint-up(md) {}
+	}
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-sm;
+		@extend .btn-accent;
+		width: rem(107);
+		margin-top: rem(10);
 	}
 }
 
@@ -476,9 +496,10 @@ picture {
 	}
 }
 
+img.object-fit-js,
 .object-fit-js img {
 	object-fit: cover;
-	object-position: top;
+	object-position: center;
 	font-family: 'object-fit: cover; object-position: top;';
 }
 
@@ -487,6 +508,7 @@ a {
 	@include mt;
 }
 
+.img-bg,
 .picture-bg {
 	position: absolute;
 	z-index: -1;
@@ -503,3 +525,27 @@ a {
 }
 
 // .pagination-wrapper li
+.btn {
+
+	@extend .mono;
+	font-weight: 700;
+}
+
+.btn-accent {
+	border: none !important;
+	background-image: linear-gradient(97.9deg, #88C057 (4.43%), #FF7400 (99.09%));
+	background-size: 100% 100%;
+	background-position: 100% 0;
+	color: #ffffff !important;
+	@include mt;
+
+	&:hover {
+		background-size: 300% 100%;
+	}
+}
+
+// коректировки с 2-й страницы
+.other-padding {
+	padding-top: rem(20);
+	padding-bottom: rem(10);
+}
