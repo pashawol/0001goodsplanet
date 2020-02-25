@@ -152,8 +152,8 @@
 		bottom: rem(500);
 		// width: rem(190);
 		@include media-breakpoint-only(md) {
-			right: rem(150);
-			bottom: rem(50);
+			right: rem(130);
+			bottom: rem(-20);
 		}
 		@include media-breakpoint-only(lg) {
 			right: rem(150);
@@ -171,12 +171,18 @@
 		@include media-breakpoint-up(xl) {
 			width: rem(246);
 		}
+		@include media-breakpoint-only(md) {
+			width: rem(100);
+		}
 	}
 	.planet-1 {
 		position: absolute;
 		left: -15%;
 		top: 40%;
 		width: rem(140);
+		@include media-breakpoint-only(md) {
+			width: rem(100);
+		}
 		@include media-breakpoint-up(xl) {
 			width: rem(236);
 			left: -65%;

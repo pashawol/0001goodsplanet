@@ -1,0 +1,148 @@
+
+mixin s-prod-body()
+	// start s-prod-body
+	+b.s-prod-body
+		+b.tabs
+			+e.caption-wrap
+				.container
+					+e.caption
+						+e.btn: span Описание
+						+e.btn.active: span Характеристики 
+						+e.btn: span Отзывы&nbsp;(30)
+			+e.wrap 
+				+e.content
+					.container
+						.row
+							+e.description.col
+								+e.title Описание продукта
+								p Чтобы оформить заказ на&nbsp;интересующее Вас товарное предложение необходимо выполнить простую последовательность действий:
+								ul
+									li Зайдите в&nbsp;каталог товаров интернет-магазина в&nbsp;главном меню.
+									li Перемещаясь по&nbsp;ссылкам, ведущим в&nbsp;те&nbsp;или иные товарные секции, выберите из&nbsp;них интересующую Вас категорию товаров. 
+									li В&nbsp;правой части страницы находится конфигуратор, при помощи которого можно производить удобный подбор товара по&nbsp;цене и&nbsp;интересующим Вас характеристикам товара. Так&nbsp;же Вы&nbsp;можете воспользоваться выпадающим фильтром, находящимся над списком товарных предложений, для быстрой сортировки предложений по&nbsp;популярности, цене и&nbsp;названию.
+									li Для добавления товара в&nbsp;корзину, воспользуйтесь кнопкой &laquo;Добавить в&nbsp;корзину&raquo;.
+									li Для быстрого заказ товара без регистрации воспользуйтесь кнопкой &laquo;Купить в&nbsp;один клик&raquo;. После появления всплывающего окна, нужно ввести свой контактный телефон и&nbsp;нажать на&nbsp;кнопку &laquo;Я&nbsp;жду звонка менеджера&raquo;. В&nbsp;ближайшее время наш специалист перезвонит Вам. Если Вы&nbsp;ранее регистрировались на&nbsp;сайте в&nbsp;качестве клиента, то&nbsp;поле телефон уже будет заполнено автоматически.
+				+e.content.active
+					.container
+						mixin tr(t1, t2)
+							tr
+								td= t1
+								td= t2
+						+e.table-wrap
+							+e.table-title Основные характеристики
+							+e.TABLE.table  
+								+tr("Серия","iPhone 11")
+								+tr("Модель","MWLT2RU/A")
+								+tr("Операционная система","iOS")
+								+tr("Технология дисплея","IPS")
+								+tr("Тип дисплея","Liquid Retina HD")
+								+tr("Диагональ/разрешение ",'6.1"/1792x828 пикс.')
+								+tr("Диагональ экрана",'6.1"(15.3 см)')
+								+tr("Безрамочный",'Да')
+						+e.table-wrap
+							+e.table-title Дисплей
+							+e.TABLE.table
+								+tr("Серия","iPhone 11")
+								+tr("Модель","MWLT2RU/A")
+								+tr("Операционная система","iOS")
+								+tr("Технология дисплея","IPS")
+				+e.content
+					.container
+						.row
+							.col-lg-8
+								mixin comment(name, surname, t)
+									+b.comment
+										.row
+											.col-sm-3
+												+e.name= name
+													span= surname
+												+b.star
+													+icon('star')(class='active')
+													+icon('star')(class='active')
+													+icon('star')(class='active')
+													+icon('star')
+													+icon('star')
+												+e.date 13.10.2019
+											.col
+												p= t
+								+comment('Витя','Огородников','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более')
+								+comment('Ольга','Смородникова','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение дизайна и композиции читаемый текст мешает')
+								+comment('Алгы','Масагамедова','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение дизайна и композиции читаемый текст мешает сосредоточДавно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное запо')
+								+comment('Ольга','Смородникова','Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение дизайна и композиции читаемый текст мешает')
+
+							.col-lg-4
+								+e.comment-rating
+									+e.five-star
+										+b.star
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+										+e.comment-quantity
+											a(href='#') 10
+										+e.comment-progress.progress
+											.progress-bar(role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+									+e.four-star
+										+b.star
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')
+										+e.comment-quantity
+											a(href='#') 15
+										+e.comment-progress.progress
+											.progress-bar(role="progressbar" style="width: 60%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+									+e.three-star
+										+b.star
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')
+											+icon('star')
+										+e.comment-quantity
+											a(href='#') 45
+										+e.comment-progress.progress
+											.progress-bar(role="progressbar" style="width: 95%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+									+e.two-star
+										+b.star
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')
+											+icon('star')
+											+icon('star')
+										+e.comment-quantity
+											a(href='#') 1
+										+e.comment-progress.progress
+											.progress-bar(role="progressbar" style="width: 5%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+									+e.one-star
+										+b.star
+											+icon('star')(class='active')
+											+icon('star')
+											+icon('star')
+											+icon('star')
+											+icon('star')
+										+e.comment-quantity 0
+										+e.comment-progress.progress
+											.progress-bar(role="progressbar" style="width: 0%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100")
+								+b.review
+									+e.title Написать отзыв
+									+e.form-wrap
+										+input("Имя *", "name", required)
+										+input("Город *", "city", required)
+										+input("E-mail *", "mail", required)
+										+e.rating Оценка
+										+b.star
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')(class='active')
+											+icon('star')
+											+icon('star')
+										+e.you-review Ваш отзыв
+										+input('Текст отзыва', 'textarea' )
+										+e.BUTTON.btn Оставить отзыв
+
+
+
+	// end s-prod-body

@@ -111,3 +111,45 @@ mixin s-catalog2()
 					+prod("8","Радар-детектор PROLOGY iScan-3050",'','649.60 ₽','197.20 ₽')
 			.text-center.d-lg-none
 				+e.btn(href="#") Смотреть все
+
+mixin s-catalog-prod()
+	// start s-catalog
+	+b.SECTION.s-catalog.catalog-prod#s-catalog&attributes(attributes)
+		.container
+			+b.section-title
+				.row
+					//- .col-auto
+					//- 	img(src="img/svg/sale.svg", alt="")
+					.col
+						h2 Похожие товары
+						+e.personal.A(href="#") Подойдет&nbsp;Вам
+						+e.personal.A(href="#") Лучший&nbsp;выбор
+					.col-auto.d-none.d-lg-block
+						+e.btn(href="#") Смотреть все
+				
+			+e.row.row
+				+e.col.col-lg-3.col-6
+					+prod("1","СЗУ Navitoch 2A iPhone 6",'649.60 ₽')
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+			
+				+e.col.col-lg-3.col-6
+					+prod("2","Смартфон BQ 5020 Strike Red","","4 964.80 ₽","4 964.80 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+			
+				+e.col.col-lg-3.col-6
+					+prod("3","Телефон BQ 1406 Vitre Gold Edition Red","649.60 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+			
+				+e.col.col-lg-3.col-6
+					+prod("4","Радар-детектор PROLOGY iScan-3050","4 640 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+			.text-center.d-lg-none
+				+e.btn(href="#") Смотреть все
