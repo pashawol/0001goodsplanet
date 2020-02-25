@@ -1,0 +1,85 @@
+mixin s-prod-head()
+	// start s-prod-head
+	+b.s-prod-head#s-prod-head&attributes(attributes)
+		.container
+			+e.head-info
+				+b.star.head-star
+					+icon('star')(class='active')
+					+icon('star')(class='active')
+					+icon('star')(class='active')
+					+icon('star')(class='active')
+					+icon('star')
+					a.number-reviews(href="#") 30 отзывов
+				+e.vendor-code Артикул: 445899-998
+			.row
+				.col-lg-8
+					.row
+						.col-md-2.second-mobile
+							.swiper-container.gallery-thumbs
+								.swiper-wrapper
+									.swiper-slide
+										+e.img-wrap
+											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-1.png" alt="")
+									.swiper-slide
+										+e.img-wrap
+											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-2.png" alt="")
+									.swiper-slide
+										+e.img-wrap
+											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-3.png" alt="")
+									.swiper-slide
+										+e.img-wrap
+											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-4.png" alt="")
+						.col-md-9.firs-mobile
+							.swiper-container.gallery-top
+								.swiper-wrapper
+									.swiper-slide
+										.img-wrap
+											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-1.png" alt="")
+									.swiper-slide
+										.img-wrap
+											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-2.png" alt="")
+									.swiper-slide
+										.img-wrap
+											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-3.png" alt="")
+									.swiper-slide
+										.img-wrap
+											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-4.png" alt="")
+								.swiper-button-next.swiper-button-black
+								.swiper-button-prev.swiper-button-black
+				.col
+					+e.buy
+						.row
+							+e.left-by-block.col-md-7
+								+e.price-wrap
+									+e.normal-price 20649.60
+									+e.discount -2068
+								+e.price 18 649.60 ₽
+								+e.discount-percent Скидка 16%
+								+e.BUTTON.btn
+									+icon('shopping-cart')
+									| В корзину
+							+e.right-by-block.col-md-5
+								+e.delivery Доставка курьером
+									span в г. Москва:
+									span.when Завтра
+								+e.A.one-click(href="#")
+									+icon('1-click')
+									span Купить в&nbsp;один&nbsp;клик
+					+e.specifications Характеристики
+						mixin tr(t1, t2)
+							tr
+								td
+									span= t1
+								td
+									span= t2
+						table
+							+tr('Серия','iPhone 11')
+							+tr('Модель','MWLT2RU/A')
+							+tr('Операционная система','iOS')
+							+tr('Технология дисплея','IPS ')
+							+tr('Тип дисплея','Liquid Retina HD')
+							+tr('Диагональ/разрешение ','6.1"/1792x828 пикс.')
+							+tr('Диагональ экрана','6.1"(15.3 см)')
+							+tr('Безрамочный','Да')
+						+e.all-specifications.A(href="#") Все характеристики
+	// end s-prod-head

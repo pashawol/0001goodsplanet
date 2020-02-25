@@ -1,0 +1,40 @@
+
+
+mixin basket-item(n,s)
+	tr.basket-item
+		td
+			img(src="img/@2x/basket-item.png", alt="")
+			= n
+		td
+			.quantity
+				button 
+				input(type="text" value="1")
+				button 
+		td= s
+		td= s
+		td 
+			button.remove
+
+mixin s-basket()
+	// start s-basket
+	+b.s-basket#s-basket&attributes(attributes)
+		.container
+			.row
+				.col-lg-9
+					table
+						+e.title.TR
+							td Товар
+							td Количество
+							td Цена
+							td Итого
+							td 
+						+basket-item('Смартфон Apple iPhone 11 64GB Black (MWLT2RU/A)', '56 327 р')
+						+basket-item('Смартфон Apple iPhone 11 64GB Black (MWLT2RU/A)', '56 327 р')
+				.col-lg-3.text-center
+					+e.total Общая стоимость
+						+e.price 156 327 р
+						+e.btn.BUTTON Оформить заказ
+					+e.clear.BUTTON Очистить корзину
+			
+
+	// end s-basket

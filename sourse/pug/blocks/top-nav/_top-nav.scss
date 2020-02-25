@@ -17,11 +17,16 @@
 	}
 	
 	&--sm {
-		border-radius: rem(10);
-		padding-bottom: rem(4) !important;
+		padding-bottom: rem(7) !important;
+		padding-top: rem(7) !important;
+		border-radius: rem(10) rem(10) rem(10) rem(10);
 		.catalog-menu {
 			padding-left: rem(18);
-
+			z-index: 5;
+		}
+		&.active {
+			border-radius: rem(0) rem(10) rem(0) rem(0);
+			margin-right: rem(-18px);
 		}
 	}
 	// 
@@ -224,9 +229,9 @@
 			content: '';
 			position: absolute;
 			right: 100%;
-			top: 0;
+			top: -47px;
 			width: 100vw;
-			height: 100%;
+			height: calc(100% + 47px);
 			background-color: $light;
 		}
 

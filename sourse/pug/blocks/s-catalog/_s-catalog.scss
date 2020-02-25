@@ -2,7 +2,6 @@
 .s-catalog {
 	&__col {
 		@include media-breakpoint-up(md) {
-
 			margin-bottom: rem(30);
 		}
 
@@ -21,37 +20,79 @@
 		margin-top: rem(30);
 	}
 
-	@include media-breakpoint-up(xl) {}
+	&.catalog-prod {
+		padding-top: rem(21);
+		padding-bottom: rem(41);
+		h2 {
+			display: inline-block;
+		}
+		.section-title {
+			&__personal {
+				color: $success;
+				font-weight: bold;
+				@include media-breakpoint-up(sm) {
+					font-size: rem(20);
+					margin-right: rem(2);
+					margin-left: rem(30);
+				}
+				@include media-breakpoint-up(lg){
+					margin-left: rem(52);
+				}
+				font-size: rem(14);
+				margin-left: rem(15);
+				text-decoration: none;
+				@include mt;
+				&:hover {
+					opacity: .7;
+				}
+			}
+		}
+	}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(xl) {
+	}
 
-	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(md) {
+	}
 
-	@include media-breakpoint-up(xs) {}
+	@include media-breakpoint-up(sm) {
+	}
+
+	@include media-breakpoint-up(xs) {
+	}
 
 	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-between(md, xl) {
+	}
 
 	//
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-only(xs) {
+	}
 
-	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-only(md) {
+	}
+
+	@include media-breakpoint-only(lg) {
+	}
+
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+	}
 
 	@include media-breakpoint-down(sm) {
 		&__row {
@@ -59,8 +100,8 @@
 		}
 	}
 
-	@include media-breakpoint-down(xs) {}
-
+	@include media-breakpoint-down(xs) {
+	}
 }
 
 // end.s-catalog

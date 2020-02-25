@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-header-icons/_s-header-icons.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-blog/_s-blog.pug
+include ../blocks/s-basket/_s-basket.pug
+
+block variables
+	- let  mainPage= null
+	//- - let  mainPage= 'show-dropdown-catalog'
+block title
+	- let  title= 'Корзина '
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		//- +top-nav()
+	.container
+		.row.other-padding
+			.col-md-3
+				+top-nav-sm
+			.col
+				+breadcrumb('Каталог товаров', title)
+				h2= title
+	+s-basket
+	+footer()

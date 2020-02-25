@@ -118,7 +118,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/4-2.png);"></div>')
 	// /добавляет подложку для pixel perfect
 
 
@@ -213,25 +213,53 @@ function eventHandler() {
 	});
 	// modal window
 
+	//Prod slider
+	const galleryThumbs = new Swiper('.gallery-thumbs', {
+		spaceBetween: 10,
+		slidesPerView: 4,
+		freeMode: true,
+		loop: true,
+		direction: 'vertical',
+		watchSlidesVisibility: true,
+		watchSlidesProgress: true,
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
+	const galleryTop = new Swiper('.gallery-top', {
+		spaceBetween: 10,
+		loop: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		thumbs: {
+			swiper: galleryThumbs
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
 
 	//    const wow = new WOW({ mobile: false });
 	//         wow.init();
 	//         wow.init();
 	$(".catalog-menu__toggle").click(function () {
 		$(this).parent().toggleClass('active');
-	})
+		$(this).parent().parent().parent().toggleClass('active');
+	});
 
 	$(".prod-item").hover(function () {
 		$(this).find(".prod-item__hover-show").fadeToggle();
 		// $(this).find(".prod-item__hover-hide").toggle();
-	})
+	});
 	// $(document).mouseup(function (e) {
 	// 	var container = $(".catalog-menu.active");
 	// 	if (container.has(e.target).length === 0) {
 	// 		container.removeClass('active');
 	// 	}
 	// });
-};
+}
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
