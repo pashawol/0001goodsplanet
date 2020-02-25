@@ -550,6 +550,10 @@ a {
 	padding-top: rem(17);
 	padding-bottom: rem(10);
 }
+h1 {
+	@extend .h2;
+	font-weight: bold;
+}
 
 .gray-bg {
 	background-color: #F7F7F7;

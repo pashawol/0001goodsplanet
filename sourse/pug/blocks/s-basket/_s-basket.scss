@@ -1,29 +1,63 @@
 // start .s-basket
 .s-basket {
-	padding-bottom: rem(90);
+	padding-top: rem(12);
+	// padding-bottom: rem(90);
 
 	tr {
-		border-bottom: 1px solid #DDDDDD;
+		border-bottom: 1px solid #dddddd;
 	}
 
 	&__title {
 		font-size: rem(14);
-		color: #4D4D4D;
-		border-bottom: 2px solid #DDDDDD;
+		color: #4d4d4d;
+		border-bottom: 2px solid #dddddd;
 		td {
+			padding-bottom: rem(10);
 			&:nth-child(2) {
 				text-align: center;
 			}
-			&:nth-child(n+3) {
+			&:nth-child(n + 3) {
 				text-align: right;
 			}
 		}
 	}
-	
+
 	table {
 		width: 100%;
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(86);
+		}
+		margin-bottom: rem(40);
 	}
 
+	td {
+		&:nth-child(1) {
+			width: 25%;
+			@include media-breakpoint-up(sm){
+				width: 38%;
+			}
+			@include media-breakpoint-up(md) {
+				width: 48%;
+			}
+		}
+		&:nth-child(2) {
+			width: 14%;
+		}
+		&:nth-child(3) {
+			width: 16%;
+			@include media-breakpoint-down(xs) {
+				display: none;
+			}
+		}
+		&:nth-child(4) {
+			width: 16%;
+		}
+		&:nth-child(5) {
+			@include media-breakpoint-down(xs) {
+				width: 6%;
+			}
+		}
+	}
 
 	&__total {
 		background-color: $light;
@@ -32,34 +66,42 @@
 		justify-content: center;
 		padding: rem(33);
 		text-align: center;
-		margin-bottom: rem(20);
+		margin-bottom: rem(18);
 		font-weight: bold;
 		border-radius: rem(10);
+		max-width: rem(271);
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	&__price {
 		@extend .h2;
 		font-weight: 700;
-		padding-bottom: rem(24);
-		padding-top: rem(19);
+		padding-bottom: rem(17);
+		padding-top: rem(17);
 	}
 
 	&__btn {
 		@extend .btn;
 		@extend .btn-accent;
 		@include mt;
-		padding-top: rem(12);
-		padding-bottom: rem(12);
-
+		margin-left: auto;
+		margin-right: auto;
+		padding: rem(7) rem(25);
+		// font-size: 1rem;
+		// padding-top: rem(12);
+		// padding-bottom: rem(12);
 	}
 
 	&__clear {
 		background-color: transparent;
 		border: none;
+		font-size: rem(14);
 		@include mt;
 		&:hover {
 			color: $primary;
 		}
+		margin-bottom: rem(40);
 	}
 
 	@include media-breakpoint-up(xl) {

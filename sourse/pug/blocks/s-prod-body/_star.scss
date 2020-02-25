@@ -11,7 +11,11 @@
 	}
 }
 
+
 .head-star {
+	@include media-breakpoint-down(sm) {
+	display: none;
+	}
 	svg {
 		font-size: rem(24);
 	}

@@ -38,7 +38,16 @@ $output-bourbon-deprecation-warnings: false;
 // @import "./node_modules/bootstrap/scss/card";
 @import "./node_modules/bootstrap/scss/breadcrumb";
 .breadcrumb{
+  @include media-breakpoint-down(sm) {
+    padding-top: rem(15);
+  }
   font-size: rem(12);
+  &.swiper-wrapper{
+    flex-wrap: nowrap;
+  }
+  &-item{
+    width: auto !important;
+  }
   .active{
     a{
       color: $breadcrumb-active-color;

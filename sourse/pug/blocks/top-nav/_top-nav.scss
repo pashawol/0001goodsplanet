@@ -19,14 +19,23 @@
 	&--sm {
 		padding-bottom: rem(7) !important;
 		padding-top: rem(7) !important;
+		user-select: none; 
 		border-radius: rem(10) rem(10) rem(10) rem(10);
+		@include media-breakpoint-down(md) {
+			width: 100%;
+		}
 		.catalog-menu {
 			padding-left: rem(18);
 			z-index: 5;
 		}
 		&.active {
+			@include media-breakpoint-down(sm){
+				width: 100vh;
+			}
 			border-radius: rem(0) rem(10) rem(0) rem(0);
+			@include media-breakpoint-only(xl){
 			margin-right: rem(-18px);
+			}
 		}
 	}
 	// 
@@ -217,7 +226,10 @@
 	}
 
 	&__dropdown {
-		width: rem(270);
+		width: 100%;
+		@include media-breakpoint-up(md){
+			width: rem(270);
+		}
 		position: absolute;
 		display: none;
 		background-color: $light;
@@ -229,9 +241,17 @@
 			content: '';
 			position: absolute;
 			right: 100%;
-			top: -47px;
+			top: -41px;
+			height: calc(100% + 41px);
+			@include media-breakpoint-up(md){
+				top: rem(-55px);
+				height: calc(100% + 55px);
+			}
+			@include media-breakpoint-up(lg){
+				top: rem(-47px);
+				height: calc(100% + 47px);
+			}
 			width: 100vw;
-			height: calc(100% + 47px);
 			background-color: $light;
 		}
 
