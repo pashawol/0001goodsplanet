@@ -219,7 +219,12 @@ function eventHandler() {
 		slidesPerView: 4,
 		freeMode: true,
 		loop: true,
-		direction: 'vertical',
+		breakpoints: {
+			768: {
+				direction: 'vertical',
+			}
+		},
+		// direction: 'vertical',
 		watchSlidesVisibility: true,
 		watchSlidesProgress: true,
 		lazy: {
