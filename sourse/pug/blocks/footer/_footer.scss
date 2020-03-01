@@ -149,8 +149,8 @@
 
 	&__img-wrap {
 		position: absolute;
-		right: rem(-100);
-		bottom: rem(500);
+		right: rem(-60);
+		bottom: rem(450);
 		// width: rem(190);
 		@include media-breakpoint-only(md) {
 			right: rem(130);
@@ -178,7 +178,7 @@
 	}
 	.planet-1 {
 		position: absolute;
-		left: -15%;
+		left: -20%;
 		top: 40%;
 		width: rem(140);
 		@include media-breakpoint-only(md) {
