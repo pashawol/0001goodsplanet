@@ -1,4 +1,5 @@
 .star {
+	display: flex;
 	svg {
 		font-size: rem(16);
 	}
@@ -6,12 +7,21 @@
 	.icon {
 		color: #e7e7e7;
 	}
+	
 	.active {
 		color: #f2c94c;
 	}
+
+	&__wrap {
+		cursor: pointer;
+	}
+
 }
 
 .head-star {
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
 	svg {
 		font-size: rem(24);
 	}

@@ -46,6 +46,9 @@
 		height: 100%;
 		max-height: rem(344);
 		padding-left: rem(7);
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(26);
+		}
 		@include media-breakpoint-up(md) {
 			margin-top: rem(75);
 		}

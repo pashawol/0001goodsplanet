@@ -633,9 +633,9 @@ $custom-file-text: (en: "Browse"
 // $pagination-line-height:            1.25 !default;
 
 // // $pagination-color:                  $link-color !default;
-// $pagination-bg:                     $white !default;
+$pagination-bg:                     #E0E0E0 !default;
 // // $pagination-border-width:           $border-width !default;
-// $pagination-border-color:           $gray-300 !default;
+$pagination-border-color:           transparent !default;
 
 // // $pagination-focus-box-shadow:       $input-btn-focus-box-shadow !default;
 // $pagination-focus-outline:          0 !default;

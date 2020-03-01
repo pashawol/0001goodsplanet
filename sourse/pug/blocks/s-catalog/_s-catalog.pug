@@ -37,7 +37,7 @@ mixin prod(i,t,p,po,pn)
 					.col-auto
 						+e.btn-basket(href="#")
 							+icon("basket") 
-			+e.modal(href="#")
+			+e.modal.link-modal(href="#modal-one-click")
 				+icon('click')
 				| Купить в один клик
 	// /+b.prod-item
@@ -153,3 +153,45 @@ mixin s-catalog-prod()
 								img(src="img/svg/best.svg", alt="")
 			.text-center.d-lg-none
 				+e.btn(href="#") Смотреть все
+
+
+mixin s-catalog5()
+	// start s-catalog
+	+b.s-catalog.pt-0#s-catalog&attributes(attributes)
+		.container
+			+e.row.row
+				+e.col.col-lg-4.col-6
+					+prod("2","Смартфон BQ 5020 Strike Red","","4 964.80 ₽","4 964.80 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+				+e.col.col-lg-4.col-6
+					+prod("3","Телефон BQ 1406 Vitre Gold Edition Red","649.60 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+				+e.col.col-lg-4.col-6
+					+prod("4","Радар-детектор PROLOGY iScan-3050","4 640 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+				+e.col.col-lg-4.col-6
+					+prod("6","Смартфон BQ 5020 Strike Red","","4 964.80 ₽","4 964.80 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("7","Телефон BQ 1406 Vitre Gold Edition Red",'','649.60 ₽','197.20 ₽')
+				+e.col.col-lg-4.col-6
+					+prod("8","Радар-детектор PROLOGY iScan-3050",'','649.60 ₽','197.20 ₽')
+				+e.col.col-lg-4.col-6
+					+prod("2","Смартфон BQ 5020 Strike Red","","4 964.80 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("3","Телефон BQ 1406 Vitre Gold Edition Red","649.60 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("4","Радар-детектор PROLOGY iScan-3050","4 640 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("2","Смартфон BQ 5020 Strike Red","","4 964.80 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("3","Телефон BQ 1406 Vitre Gold Edition Red","649.60 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("4","Радар-детектор PROLOGY iScan-3050","4 640 ₽")
+			+e.pugin.row
+				+pugin

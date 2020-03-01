@@ -1,0 +1,61 @@
+mixin s-filter()
+	.s-filter-wrap.d-lg-block
+		// start s-filter
+		mixin in-c2(typ="checkbox", text, name= typ )
+			+b.LABEL.custom-input
+				+e.INPUT.input(type= typ , name= name)&attributes(attributes)
+				+e.SPAN.lab
+				if block
+					block 
+				else
+					+e.SPAN.text= text
+		+b.s-filter&attributes(attributes) 
+			mixin range(c1, c2)
+				.range-wrap.price_slider_amount
+					input.range-slider.slider-js(type='text'  data-min= c1  data-max= c2)
+					.row
+						label.col-6 
+							+e.text.SPAN От:
+							+b.INPUT.range-result--minus.minus(type="text" readonly)
+						label.col-6
+							+e.text-right.SPAN До:
+							+b.INPUT.range-result--plus.plus(type="text" readonly)
+
+			mixin  group(t)
+				+e.group
+					+e.title.showhide.active= t 
+						span
+					.showhide-all
+						.showhide-all__inner
+							block
+
+			button.s-filter__btn.s-filter__btn--js.d-lg-none.mb-3.ttu(type='button')
+			strong Фильтр
+			+group('Цена')
+				+range("100", "60000")
+			+group('Разрешение дисплея')
+				-
+					var list = ["1024 х 600","1024 х 600","1024 х 700","1080 х 1920","1136х640","1024 х 600","1280 х 800","1024 х 600","128 х 160","1024 х 600"]
+				each item in list
+					+in-c2("checkbox",item)
+				+e.show.btn Показать еще 10
+			+group('Цена')
+			+group('Сенсорны дисплей')
+			+group('Модель телефона')
+			+group('Производитель')
+				-
+					var list = ["ASUS","A-DATA","ALCATEL","ACTIV","ACER","APACER","APPLE","ASAU","AUKEY","BLUEDIO"]
+				each item in list
+					+in-c2("checkbox",item)
+				+e.show.btn Показать еще 10
+			+group('Операционная система')
+				-
+					var list = ["IOS","Android"]
+				each item in list
+					+in-c2("checkbox",item)
+			+group('Количество ядер процессора')
+			+group('Встроенная память')
+			+e.sidebar-list
+				+e.discharge.BUTTON Сбросить
+				+e.apply.BUTTON Применить
+	// end s-filter

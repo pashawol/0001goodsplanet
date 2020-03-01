@@ -43,7 +43,7 @@
 				text-decoration: none;
 				@include mt;
 				&:hover {
-					opacity: .7;
+					color: $primary;
 				}
 			}
 		}
@@ -97,6 +97,12 @@
 	@include media-breakpoint-down(sm) {
 		&__row {
 			@include roww(1);
+		}
+		.display-by {
+			display: none;
+		}
+		ul.page-numbers {
+			margin: rem(35) auto;
 		}
 	}
 

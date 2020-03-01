@@ -1,0 +1,21 @@
+mixin s-catalog-menu()
+	// start s-catalog-menu
+	+b.s-catalog-menu#s-catalog-menu&attributes(attributes)
+		.container
+			+e.banner 
+				img.object-fit-js.img-bg(src="img/@2x/catalog-banner.png", alt="")
+				+e.text-wrapper
+					+e.title Банер категории для продвижения товара
+					+e.subtitle Приобретение электроники и техники бытового назначения
+					+e.A.btn(href='#') Подробнее...
+			.row
+				.col
+					+b.catalog-sort
+						+e.SELECT.input(id="vertical")
+							option(value="Сначала дешевые") Сначала дешевые
+							option(value="Сначала дорогие") Сначала дорогие
+						+pugin
+						button.s-filter__btn.s-filter__btn--js.d-lg-none.mb-3.ttu(type='button')
+							+icon('filter')
+
+	// end s-catalog-menu
