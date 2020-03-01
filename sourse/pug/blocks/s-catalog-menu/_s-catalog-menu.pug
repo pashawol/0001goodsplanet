@@ -1,0 +1,56 @@
+mixin s-catalog-menu()
+	// start s-catalog-menu
+	+b.s-catalog-menu#s-catalog-menu&attributes(attributes)
+		.container
+			+e.banner 
+				img.object-fit-js.img-bg(src="img/@2x/catalog-banner.png", alt="")
+				+e.text-wrapper
+					+e.title Банер категории для продвижения товара
+					+e.subtitle Приобретение электроники и техники бытового назначения
+					+e.A.btn(href='#') Подробнее...
+			.row
+				.col
+					+b.catalog-sort
+						+e.SELECT.input(id="vertical")
+							option(value="Сначала дешевые") Сначала дешевые
+							option(value="Сначала дорогие") Сначала дорогие
+						+pugin
+						button.s-filter__btn.s-filter__btn--js.d-lg-none.mb-3.ttu(type='button')
+							+icon('filter')
+			+e.row.row
+				+e.col.col-lg-4.col-6
+					+prod("2","Смартфон BQ 5020 Strike Red","","4 964.80 ₽","4 964.80 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+				+e.col.col-lg-4.col-6
+					+prod("3","Телефон BQ 1406 Vitre Gold Edition Red","649.60 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+				+e.col.col-lg-4.col-6
+					+prod("4","Радар-детектор PROLOGY iScan-3050","4 640 ₽")
+						+b.d32.bg-success
+							+e.inner
+								img(src="img/svg/best.svg", alt="")
+				+e.col.col-lg-4.col-6
+					+prod("6","Смартфон BQ 5020 Strike Red","","4 964.80 ₽","4 964.80 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("7","Телефон BQ 1406 Vitre Gold Edition Red",'','649.60 ₽','197.20 ₽')
+				+e.col.col-lg-4.col-6
+					+prod("8","Радар-детектор PROLOGY iScan-3050",'','649.60 ₽','197.20 ₽')
+				+e.col.col-lg-4.col-6
+					+prod("2","Смартфон BQ 5020 Strike Red","","4 964.80 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("3","Телефон BQ 1406 Vitre Gold Edition Red","649.60 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("4","Радар-детектор PROLOGY iScan-3050","4 640 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("2","Смартфон BQ 5020 Strike Red","","4 964.80 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("3","Телефон BQ 1406 Vitre Gold Edition Red","649.60 ₽")
+				+e.col.col-lg-4.col-6
+					+prod("4","Радар-детектор PROLOGY iScan-3050","4 640 ₽")
+			+e.pugin.row
+				+pugin
+	// end s-catalog-menu

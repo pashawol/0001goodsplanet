@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/s-content/_s-content.pug
+include ../blocks/s-contact/_s-contact.pug
+include ../blocks/s-category/_s-category.pug
+include ../blocks/s-header-icons/_s-header-icons.pug
+include ../blocks/s-blog/_s-blog.pug
+include ../blocks/s-catalog/_s-catalog.pug
+include ../blocks/s-search-article/_s-search-article.pug
+include ../blocks/s-catalog-menu/_s-catalog-menu.pug
+include ../blocks/s-filter/_s-filter.pug
+
+block variables
+	- let  mainPage= 'inner-page'
+	//- - let  mainPage= 'show-dropdown-catalog'
+block title
+	- let  title= 'Телефоны'
+	title= title
+block pagecontent 
+	+mob-mnu()
+	+header()
+		+top-line()
+		//- +top-nav()
+	.container
+		.row
+			.col-lg-3
+				+top-nav-sm
+				+s-filter
+
+			.col.other-padding
+				+breadcrumb('Каталог товаров', ' Смартфоны и мобильные телефоны')
+				h1 Телефоны
+				+s-catalog-menu
+
+	//- +s-prod-head
+	//- +s-catalog-prod
+	+s-search-article(class="gray-bg")
+	+s-blog
+	+footer()

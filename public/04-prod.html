@@ -20,6 +20,7 @@
 		<!-- Custom Browsers Color-->
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
+		<link rel="stylesheet" href="libs/ion-rangeslider/css/ion.rangeSlider.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
@@ -260,7 +261,7 @@
 									</div>
 									<div class="s-prod-head__right-by-block col-md-5">
 										<div class="s-prod-head__delivery">Доставка курьером<span>в г. Москва:</span><span class="when">Завтра</span>
-										</div><a class="s-prod-head__one-click" href="#">
+										</div><a class="s-prod-head__one-click linl-modal" href="#modal-one-click">
 										<svg class="icon icon-1-click ">
 											<use xlink:href="img/svg/sprite.svg#1-click"></use>
 										</svg><span>Купить в&nbsp;один&nbsp;клик</span></a>
@@ -670,21 +671,31 @@
 												<div class="review__rating">Оценка
 												</div>
 												<div class="star">
-													<svg class="icon icon-star  active">
-														<use xlink:href="img/svg/sprite.svg#star"></use>
-													</svg>
-													<svg class="icon icon-star  active">
-														<use xlink:href="img/svg/sprite.svg#star"></use>
-													</svg>
-													<svg class="icon icon-star  active">
-														<use xlink:href="img/svg/sprite.svg#star"></use>
-													</svg>
-													<svg class="icon icon-star ">
-														<use xlink:href="img/svg/sprite.svg#star"></use>
-													</svg>
-													<svg class="icon icon-star ">
-														<use xlink:href="img/svg/sprite.svg#star"></use>
-													</svg>
+													<div class="star__wrap">
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="star__wrap">
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="star__wrap">
+														<svg class="icon icon-star  active">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="star__wrap">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
+													<div class="star__wrap">
+														<svg class="icon icon-star ">
+															<use xlink:href="img/svg/sprite.svg#star"></use>
+														</svg>
+													</div>
 												</div>
 												<div class="review__you-review">Ваш отзыв
 												</div>
@@ -1004,7 +1015,7 @@
 							<div class="col-md-auto"> 
 								<h2>Есть вопросы? Звоните! <a href="tel:+7(916)900-2-999">+7 (916) 900-2-999</a></h2>
 							</div>
-							<div class="questions__messengers col-md-4">
+							<div class="questions__messengers col-lg-4">
 								<h5>Наш магазин в месенджерах:</h5>
 								<div class="questions__links"><a href="#">
 										<svg class="icon icon-telegram ">
@@ -1118,6 +1129,25 @@
 					</div>
 				</form>
 			</div>
+			<div class="modal-one-click" id="modal-one-click">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="text-center"></div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+					</form>
+				</div>
+			</div>
 			<!-- #modal-call-->
 		</div>
 		<!-- modal-->
@@ -1137,6 +1167,7 @@
 		<script src="libs/svg4everybody/svg4everybody.min.js"></script>
 		<!-- /for svg libs-->
 		<script src="libs/inputmask/jquery.inputmask.min.js"></script>
+		<script src="libs/ion-rangeslider/js/ion.rangeSlider.min.js"></script>
 		<script src="js/common.js"></script>
 	</body>
 </html>

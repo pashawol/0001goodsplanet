@@ -42,5 +42,14 @@ mixin modal()
 			//- +text( "Комментарий")
 			+e.INPUT.btn(type="submit" value="Рассчитать") 
 			+polite()
+
+		+b.modal-one-click(id="modal-one-click" )
+			//- +pic('modal-clean-img','jpg','','')
+			+form-wrap()
+				.text-center
+				+input("Ваше Имя")(required) 
+				+input("Ваш телефон","tel")(required)
+
+
 		// #modal-call
 	// modal

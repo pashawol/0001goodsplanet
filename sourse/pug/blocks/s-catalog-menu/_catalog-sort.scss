@@ -1,0 +1,32 @@
+.catalog-sort {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: rem(33);
+
+	&__input {
+		margin-right: rem(107);
+		max-height: rem(32);
+		border-radius: rem(15);
+		border: none;
+		background-color: #e0e0e0;
+		padding: rem(5) rem(60) rem(7) rem(13);
+		outline: none;
+		position: relative;
+		font-size: rem(14);
+		appearance: none;
+		background-image: url('../img/svg/select-arrow.svg');
+		background-position: calc(100% - 14px) 50%;
+		background-repeat: no-repeat;
+	}
+
+	@include media-breakpoint-down(lg) {
+		.pagination-wrapper {
+			display: none;
+		}
+	}
+
+	svg {
+		color: #88c057;
+	}
+}

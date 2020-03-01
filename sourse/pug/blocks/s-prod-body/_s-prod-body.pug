@@ -134,11 +134,17 @@ mixin s-prod-body()
 										+input("E-mail *", "mail", required)
 										+e.rating Оценка
 										+b.star
-											+icon('star')(class='active')
-											+icon('star')(class='active')
-											+icon('star')(class='active')
-											+icon('star')
-											+icon('star')
+											+e.wrap
+												+icon('star')(class='active')
+											+e.wrap
+												+icon('star')(class='active')
+											+e.wrap
+												+icon('star')(class='active')
+											+e.wrap
+												+icon('star')
+											+e.wrap
+												+icon('star')
+
 										+e.you-review Ваш отзыв
 										+input('Текст отзыва', 'textarea' )
 										+e.BUTTON.btn Оставить отзыв

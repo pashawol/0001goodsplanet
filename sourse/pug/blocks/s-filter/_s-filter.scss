@@ -1,0 +1,267 @@
+// start .s-filter
+.s-filter {
+	padding-top: rem(20);
+	padding-bottom: rem(20);
+	&.active {
+		display: block;
+	}
+	@include media-breakpoint-down(md) {
+		display: none;
+	}
+
+	.showhide-all {
+		// width: 100%;
+		// display: flex;
+		// flex-wrap: wrap;
+	}
+	.custom-input {
+		// flex: 0 0 49%;
+		width: 49%;
+		// display: flex;
+		// // justify-content: center;
+		// align-items: center;
+		&__lab {
+			background-color: #e0e0e0;
+			border-radius: rem(5);
+			width: rem(24);
+			height: rem(24);
+			margin-right: rem(14);
+		}
+		margin-bottom: rem(8);
+		&__text {
+			font-size: rem(14);
+		}
+	}
+
+	&__title {
+		font-weight: bold;
+		margin-bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: rem(10) rem(0) rem(7) !important;
+
+		span {
+			width: rem(32px);
+			height: rem(32px);
+			border-radius: 50%;
+			position: relative;
+			background-color: $primary;
+			@include mt;
+			&::after,
+			&::before {
+				content: '';
+				position: absolute;
+				width: rem(16);
+				height: 1px;
+				top: 50%;
+				left: 25%;
+				background-color: #fff;
+			}
+			&::before {
+				transform: rotate(90deg);
+			}
+		}
+		&.active {
+			span {
+				background-color: #e0e0e0;
+				&::before {
+					display: none;
+				}
+			}
+		}
+
+		padding: rem(14) 0;
+		padding-right: rem(30);
+		position: relative;
+		z-index: 4;
+		cursor: pointer;
+
+		&.active {
+			&::after {
+				transform: translateY(-50%) rotateX(180deg);
+			}
+		}
+	}
+
+	.range-wrap {
+		padding-top: rem(10);
+		padding-bottom: rem(10);
+
+		.row {
+			@include roww(8);
+			justify-content: space-between;
+			position: relative;
+		}
+
+		input {
+			height: rem(31);
+			font-size: $small;
+			text-align: left;
+			border-radius: 3px;
+			border: 1px solid #dadde2;
+			padding: rem(10) rem(10);
+			color: #6f7378;
+			max-width: rem(105);
+			font-weight: 500;
+			border: none;
+			outline: none;
+			cursor: default;
+			font-size: rem(14);
+			font-weight: bold;
+			color: #4d4d4d;
+		}
+
+		label {
+			margin-bottom: 0;
+		}
+
+		.col-6 {
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	.range-result--plus {
+		text-align: right !important;
+		width: rem(60);
+		padding-left: 0 !important;
+	}
+
+	&__show {
+		outline: none;
+		color: $primary;
+		padding: 0;
+		font-size: $small;
+		font-weight: 700;
+		margin-top: rem(4);
+		margin-bottom: rem(4);
+		@include mt;
+		cursor: pointer;
+		&:hover {
+			color: #000;
+		}
+	}
+
+	&__sidebar-list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-top: rem(10);
+		@include media-breakpoint-up(xl) {
+		padding-left: rem(16);
+		}
+	}
+
+	&__discharge {
+		border: none;
+		color: #000;
+		background-color: transparent;
+		@include mt;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+
+	&__apply {
+		@extend .btn;
+		@extend .btn-sm;
+		@extend .btn-accent;
+		font-size: 1rem;
+		padding: rem(8) rem(27);
+		font-weight: 900;
+	}
+
+	&__btn {
+		width: rem(16);
+		height: rem(16);
+		position: relative;
+		border: none;
+		background-color: transparent;
+		margin-right: rem(25);
+		&::after,
+		&::before {
+			content: '';
+			position: absolute;
+			width: rem(1);
+			height: rem(16);
+			top: 10%;
+			left: 50%;
+			transform: rotate(45deg);
+			background-color: #000;
+		}
+		&::before {
+			transform: rotate(-45deg);
+		}
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+
+	.irs--round {
+		margin-top: rem(-29);
+	}
+
+	.irs {
+		margin-bottom: rem(8);
+	}
+	.irs-bar {
+		height: rem(2);
+		top: rem(37px);
+		background: linear-gradient(156.42deg, #88c057 4.43%, #ff7400 99.09%);
+	}
+	.irs-handle {
+		border: none;
+		width: rem(22);
+		height: rem(22);
+		background: linear-gradient(156.42deg, #88c057 4.43%, #ff7400 99.09%);
+	}
+	.irs-line {
+		height: rem(8);
+		border-radius: rem(15px);
+		top: rem(34px);
+	}
+
+	&__text {
+		font-size: rem(14);
+		&-right {
+			margin-left: auto;
+		}
+	}
+} // end.s-filter
