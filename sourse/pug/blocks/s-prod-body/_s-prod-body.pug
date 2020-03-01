@@ -129,9 +129,9 @@ mixin s-prod-body()
 								+b.review.form-wrap
 									+e.title Написать отзыв
 									+e.form-wrap
-										+input("Имя *", "name", required)
-										+input("Город *", "city", required)
-										+input("E-mail *", "mail", required)
+										+input("Имя *", "text")(required)
+										+input("Город *")(required)
+										+input("E-mail *", "email")(required)
 										+e.rating Оценка
 										+b.star
 											+e.wrap
