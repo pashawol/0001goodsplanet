@@ -98,6 +98,12 @@
 		&__row {
 			@include roww(1);
 		}
+		.display-by {
+			display: none;
+		}
+		ul.page-numbers {
+			margin: rem(35) auto;
+		}
 	}
 
 	@include media-breakpoint-down(xs) {

@@ -43,13 +43,51 @@ mixin modal()
 			+e.INPUT.btn(type="submit" value="Рассчитать") 
 			+polite()
 
-		+b.modal-one-click(id="modal-one-click" )
+			// #modal-call
+
+
+		+b.modal-one-click.modal(id="modal-one-click")
 			//- +pic('modal-clean-img','jpg','','')
 			+form-wrap()
-				.text-center
+				+e.title Оформить заказ
 				+input("Ваше Имя")(required) 
 				+input("Ваш телефон","tel")(required)
+				+e.BUTTON.btn Заказать
+
+		// #modal-one-click
 
 
-		// #modal-call
+		+b.modal-registration.modal(id="modal-registration")
+			//- +pic('modal-clean-img','jpg','','')
+			+form-wrap()
+				+e.title Регистрация
+				+e.input-wrap.row
+					.col-md-6
+						+input("E-mail","mail")(required)
+						+input("Пароль")(required)
+						+input("Повторите пароль")(required)
+					.col-md-6
+						+input("Фамилия")(required)
+						+input("Имя")(required)
+						+input("Отчество")(required)
+				+e.BUTTON.btn Зарегистрироваться
+				+e.A.entrance(href="#") Войти
+				+e.polite Нажимая на кнопку "Зарегистрироваться" вы соглашаетесь на обработку персональных данных в соответствии с <a href="#">Офертой</a> и <a href="#">Политикой конфиденциальности</a>
+
+		// #modal-entrance
+
+		+b.modal-entrance.modal(id="modal-entrance")
+			//- +pic('modal-clean-img','jpg','','')
+			+form-wrap()
+				+e.title Войти в личный кабинет
+				+input("Логин")(required) 
+				+input("Пароль")(required)
+				+e.BUTTON.btn Войти
+			+e.identity
+				+e.A.remind(href="#") Забыли пароль?
+				+e.A.reg(href="#") Регистрация
+
+		// #modal-entrance
+
+
 	// modal

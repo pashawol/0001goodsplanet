@@ -64,11 +64,11 @@
 								<div class="col-auto">
 									<div class="top-line__lk">
 										<ul>
-											<li><a href="#">
+											<li><a class="link-modal" href="#modal-entrance">
 													<svg class="icon icon-user ">
 														<use xlink:href="img/svg/sprite.svg#user"></use>
 													</svg>Вход</a></li>
-											<li><a href="#">Регистрация</a></li>
+											<li><a class="link-modal" href="#modal-registration">Регистрация</a></li>
 										</ul>
 									</div>
 								</div>
@@ -411,9 +411,10 @@
 						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
 						</label>
 					</div>
+					<!-- #modal-call-->
 				</form>
 			</div>
-			<div class="modal-one-click" id="modal-one-click">
+			<div class="modal-one-click modal" id="modal-one-click">
 				<div class="form-wrap">
 					<form>
 						<input type="hidden" name="example-input-field"/>
@@ -422,17 +423,88 @@
 						<input class="utm_term" type="hidden" name="utm_term"/>
 						<input class="utm_medium" type="hidden" name="utm_medium"/>
 						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-						<div class="text-center"></div>
+						<div class="form-wrap__title">Оформить заказ
+						</div>
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
 						</div>
 						<!-- +e.input-wrap-->
 						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="tel" placeholder="Ваш телефон" name="tel" required="required"/>
 						</div>
 						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn">Заказать
+						</button>
 					</form>
 				</div>
 			</div>
-			<!-- #modal-call-->
+			<!-- #modal-one-click-->
+			<div class="modal-registration modal" id="modal-registration">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="form-wrap__title">Регистрация
+						</div>
+						<div class="form-wrap__input-wrap row">
+							<div class="col-md-6">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="mail" placeholder="E-mail" name="mail" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Пароль" name="text" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Повторите пароль" name="text" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+							<div class="col-md-6">
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Фамилия" name="text" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Имя" name="text" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Отчество" name="text" required="required"/>
+								</div>
+								<!-- +e.input-wrap-->
+							</div>
+						</div>
+						<button class="form-wrap__btn">Зарегистрироваться
+						</button><a class="form-wrap__entrance" href="#">Войти</a>
+						<div class="form-wrap__polite">Нажимая на кнопку "Зарегистрироваться" вы соглашаетесь на обработку персональных данных в соответствии с <a href="#">Офертой</a> и <a href="#">Политикой конфиденциальности</a>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- #modal-entrance-->
+			<div class="modal-entrance modal" id="modal-entrance">
+				<div class="form-wrap">
+					<form>
+						<input type="hidden" name="example-input-field"/>
+						<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+						<input class="utm_source" type="hidden" name="utm_source"/>
+						<input class="utm_term" type="hidden" name="utm_term"/>
+						<input class="utm_medium" type="hidden" name="utm_medium"/>
+						<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+						<div class="form-wrap__title">Войти в личный кабинет
+						</div>
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Логин" name="text" required="required"/> 
+						</div>
+						<!-- +e.input-wrap-->
+						<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Пароль" name="text" required="required"/>
+						</div>
+						<!-- +e.input-wrap-->
+						<button class="form-wrap__btn">Войти
+						</button>
+					</form>
+				</div>
+				<div class="modal-entrance__identity"><a class="modal-entrance__remind" href="#">Забыли пароль?</a><a class="modal-entrance__reg" href="#">Регистрация</a>
+				</div>
+			</div>
+			<!-- #modal-entrance-->
 		</div>
 		<!-- modal-->
 		<script src="js/lazy.js"></script>

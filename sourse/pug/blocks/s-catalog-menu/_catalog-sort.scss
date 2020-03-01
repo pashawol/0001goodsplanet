@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-bottom: rem(33);
+	padding-bottom: rem(23);
 
 	&__input {
 		margin-right: rem(107);
@@ -21,7 +21,16 @@
 	}
 
 	@include media-breakpoint-down(lg) {
-		.pagination-wrapper {
+		.display-by {
+			display: none;
+		}
+	}
+
+	.pagination-wrapper {
+		@include media-breakpoint-only(lg) {
+			justify-content: flex-end;
+		}
+		@include media-breakpoint-down(md) {
 			display: none;
 		}
 	}

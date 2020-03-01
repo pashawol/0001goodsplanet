@@ -26,12 +26,16 @@ block pagecontent
 		.row
 			.col-lg-3
 				+top-nav-sm
-				+s-filter
-
+				
 			.col.other-padding
 				+breadcrumb('Каталог товаров', ' Смартфоны и мобильные телефоны')
 				h1 Телефоны
 				+s-catalog-menu
+		.row
+			.col-lg-3
+				+s-filter
+			.col
+				+s-catalog5
 
 	//- +s-prod-head
 	//- +s-catalog-prod
