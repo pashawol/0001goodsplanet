@@ -193,9 +193,29 @@
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-8">
+						<div class="col-lg-7 col-xl-8 col-md-6">
 							<div class="row">
-								<div class="col-md-2 second-mobile">
+								<div class="col-lg-9">
+									<div class="swiper-container gallery-top">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<div class="img-wrap"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/prod-item-1.png" alt=""/></div>
+											</div>
+											<div class="swiper-slide">
+												<div class="img-wrap"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/prod-item-2.png" alt=""/></div>
+											</div>
+											<div class="swiper-slide">
+												<div class="img-wrap"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/prod-item-3.png" alt=""/></div>
+											</div>
+											<div class="swiper-slide">
+												<div class="img-wrap"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/prod-item-4.png" alt=""/></div>
+											</div>
+										</div>
+										<div class="swiper-button-next swiper-button-black"></div>
+										<div class="swiper-button-prev swiper-button-black"></div>
+									</div>
+								</div>
+								<div class="col-lg-2 order-lg-first">
 									<div class="swiper-container gallery-thumbs">
 										<div class="swiper-wrapper">
 											<div class="swiper-slide">
@@ -215,26 +235,6 @@
 												</div>
 											</div>
 										</div>
-									</div>
-								</div>
-								<div class="col-md-9 firs-mobile">
-									<div class="swiper-container gallery-top">
-										<div class="swiper-wrapper">
-											<div class="swiper-slide">
-												<div class="img-wrap"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/prod-item-1.png" alt=""/></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="img-wrap"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/prod-item-2.png" alt=""/></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="img-wrap"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/prod-item-3.png" alt=""/></div>
-											</div>
-											<div class="swiper-slide">
-												<div class="img-wrap"><img class="res-i swiper-lazy" src="#" data-src="img/@2x/prod-item-4.png" alt=""/></div>
-											</div>
-										</div>
-										<div class="swiper-button-next swiper-button-black"></div>
-										<div class="swiper-button-prev swiper-button-black"></div>
 									</div>
 								</div>
 							</div>
@@ -325,7 +325,7 @@
 						</div>
 					</div>
 					<div class="tabs__wrap"> 
-						<div class="tabs__content">
+						<div class="tabs__content active">
 							<div class="container">
 								<div class="row">
 									<div class="tabs__description col">
@@ -343,7 +343,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="tabs__content active">
+						<div class="tabs__content">
 							<div class="container">
 								<div class="tabs__table-wrap">
 									<div class="tabs__table-title">Основные характеристики
@@ -659,13 +659,13 @@
 											<div class="review__title">Написать отзыв
 											</div>
 											<div class="review__form-wrap">
-												<div class="review__input-wrap form-group"><input class="review__input form-control" type="name" placeholder="Имя *" name="name"/>
+												<div class="review__input-wrap form-group"><input class="review__input form-control" type="text" placeholder="Имя *" name="text" required="required"/>
 												</div>
 												<!-- +e.input-wrap-->
-												<div class="review__input-wrap form-group"><input class="review__input form-control" type="city" placeholder="Город *" name="city"/>
+												<div class="review__input-wrap form-group"><input class="review__input form-control" type="text" placeholder="Город *" name="text" required="required"/>
 												</div>
 												<!-- +e.input-wrap-->
-												<div class="review__input-wrap form-group"><input class="review__input form-control" type="mail" placeholder="E-mail *" name="mail"/>
+												<div class="review__input-wrap form-group"><input class="review__input form-control" type="email" placeholder="E-mail *" name="email" required="required"/>
 												</div>
 												<!-- +e.input-wrap-->
 												<div class="review__rating">Оценка
@@ -1076,15 +1076,15 @@
 						</div>
 					</div>
 					<div class="footer__footer_foot row align-items-center">
-						<div class="col"> 
-							<div class="footer__rights-reserved">© Все права защищены
-							</div>
-						</div>
 						<div class="col-md-6">
 							<ul class="catalog">
-								<li> <a href="#">Политика конфиденциальности</a></li>
+								<li> <a class="polite" href="#">Политика конфиденциальности</a></li>
 								<li> <a href="#">Обратная связь</a></li>
 							</ul>
+						</div>
+						<div class="col order-lg-first">
+							<div class="footer__rights-reserved">© Все права защищены
+							</div>
 						</div>
 						<div class="col text-right">
 							<div class="footer__soc"><a href="">
@@ -1166,7 +1166,7 @@
 						</div>
 						<div class="form-wrap__input-wrap row">
 							<div class="col-md-6">
-								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="mail" placeholder="E-mail" name="mail" required="required"/>
+								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="email" placeholder="E-mail" name="email" required="required"/>
 								</div>
 								<!-- +e.input-wrap-->
 								<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Пароль" name="text" required="required"/>

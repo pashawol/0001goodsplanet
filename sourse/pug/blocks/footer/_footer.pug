@@ -70,14 +70,14 @@ mixin footer()
 					img.planet-2(src="img/@2x/planet_2.png",  alt="")
 					img.planet-1(src="img/@2x/planet-1.png",  alt="")
 			+e.footer_foot.row.align-items-center
-				.col 
-					+e.rights-reserved © Все права защищены
 				.col-md-6
 					ul.catalog
 						li 
-							a(href="#") Политика конфиденциальности
+							a.polite(href="#") Политика конфиденциальности
 						li 
 							a(href="#") Обратная связь
+				.col.order-lg-first
+					+e.rights-reserved © Все права защищены
 				.col.text-right
 					+e.soc
 						a(href="")

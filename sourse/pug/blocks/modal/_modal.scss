@@ -158,6 +158,11 @@ a {
 	}
 }
 
+.fancybox-is-open .fancybox-bg {
+	opacity: .4;
+	background: #000000;
+}
+
 //
 @include media-breakpoint-up(xl) {
 }
