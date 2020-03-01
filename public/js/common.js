@@ -174,7 +174,7 @@ function eventHandler() {
 	JSCCommon.inputMask(); // JSCCommon.CustomInputFile();
 	// добавляет подложку для pixel perfect
 
-	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/5.png);"></div>'); // /добавляет подложку для pixel perfect
+	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>'); // /добавляет подложку для pixel perfect
 	// const url = document.location.href;
 	// $.each($(".top-nav__nav a "), function() {
 	// 	if (this.href == url) {
@@ -257,7 +257,7 @@ function eventHandler() {
 		freeMode: true,
 		loop: true,
 		breakpoints: {
-			768: {
+			992: {
 				direction: 'vertical'
 			}
 		},
@@ -302,6 +302,9 @@ function eventHandler() {
 	$(".catalog-menu__toggle").click(function () {
 		$(this).parent().toggleClass('active');
 		$(this).parent().parent().parent().toggleClass('active');
+	});
+	$(".s-filter__show").click(function () {
+		$(this).hide().parent().find('.custom-input:hidden').css('display', 'inline-block');
 	});
 	$(".prod-item").hover(function () {
 		$(this).find(".prod-item__hover-show").fadeToggle(); // $(this).find(".prod-item__hover-hide").toggle();

@@ -9,6 +9,7 @@
 	&__head-info {
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		@include media-breakpoint-down(sm){
 			flex-direction: column;
 		}
@@ -67,6 +68,24 @@
 		}
 	}
 
+	.swiper-button-next:after, .swiper-button-prev:after {
+		display: none;
+	}
+
+	.swiper-button-next:before, .swiper-button-prev:before {
+		content: '';
+		position: absolute;
+		z-index: 10;
+		width: rem(21px);
+		height: rem(42px);
+		background-image: url('../img/svg/swiper-button.svg');
+		background-repeat: no-repeat;
+	}
+
+	.swiper-button-next:before {
+		transform: rotate(180deg);
+	}
+
 	.gallery-top {
 		margin-top: rem(13);
 		height: 100%;
@@ -76,6 +95,7 @@
 	.number-reviews {
 		margin-left: rem(18);
 		font-size: rem(14);
+		padding-top: rem(3);
 		vertical-align: middle;
 	}
 
@@ -124,7 +144,9 @@
 		display: inline-block;
 		text-decoration-line: line-through;
 		color: #828282;
-
+		@include media-breakpoint-only(lg) {
+		margin-right: rem(5);
+		}
 		margin-right: rem(14);
 	}
 
@@ -154,7 +176,7 @@
 		// @extend .h2;
 		font-weight: bold;
 		font-size: rem(35);
-		@include media-breakpoint-up(lg){
+		@include media-breakpoint-up(md){
 			font-size: rem(20);
 		}
 		@include media-breakpoint-up(xl) {
@@ -224,6 +246,7 @@
 			}
 		}
 		.when {
+			padding-left: rem(5);
 			color: $success;
 		}
 	}
@@ -233,7 +256,7 @@
 		display: flex;
 		align-items: center;
 		color: #4f4f4f;
-		padding-bottom: rem(3);
+		padding-bottom: rem(7);
 		order: 1;
 		@include media-breakpoint-down(sm) {
 			margin-left: auto;
@@ -257,7 +280,7 @@
 			}
 		}
 		span {
-			line-height: rme(18);
+			line-height: rem(18);
 			font-weight: 500;
 			text-align: left;
 			@include media-breakpoint-up(lg) {

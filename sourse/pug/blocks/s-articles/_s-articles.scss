@@ -4,14 +4,14 @@
 	color: #4f4f4f;
 	padding-bottom: rem(35);
 
-	&__title {
+	h3 {
 		color: #333333;
 		font-size: rem(24);
 		font-weight: bold;
 		padding-bottom: rem(3);
 	}
 
-	&__subtitle {
+	h4 {
 		color: #333333;
 		font-weight: 500;
 		line-height: 1.4;
@@ -36,7 +36,7 @@
 			background-image: url(../img/svg/planet.svg);
 			left: rem(-0);
 			position: absolute;
-			top: rem(8);
+			top: rem(5);
 		}
 	}
 	ul {
@@ -48,7 +48,7 @@
 		padding-bottom: rem(13);
 	}
 
-	&__emphasis {
+	blockquote {
 		margin: rem(18) 0 rem(35) rem(20);
 		padding-left: rem(24);
 		line-height: 1.2;

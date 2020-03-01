@@ -35,13 +35,26 @@ mixin s-filter()
 				+range("100", "60000")
 			+group('Разрешение дисплея')
 				-
-					var list = ["1024 х 600","1024 х 600","1024 х 700","1080 х 1920","1136х640","1024 х 600","1280 х 800","1024 х 600","128 х 160","1024 х 600"]
+					var list = ["1024 х 600","1024 х 600","1024 х 700","1080 х 1920","1136х640","1024 х 600","1280 х 800","1024 х 600","128 х 160","1024 х 600","1024 х 600","1024 х 600","1024 х 600","1024 х 600","1024 х 600","1024 х 600"]
 				each item in list
 					+in-c2("checkbox",item)
 				+e.show.btn Показать еще 10
 			+group('Цена')
+				-
+					var list = [">1000",">10000",">25000",">50000"]
+				each item in list
+					+in-c2("checkbox",item)
 			+group('Сенсорны дисплей')
+				-
+					var list = ["Да","Нет"]
+				each item in list
+					+in-c2("checkbox",item)
 			+group('Модель телефона')
+				-
+					var list = ["11 Pro","11 Pro Max","11","XS","XS Max","XR","X","ASAU","8","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus","8 Plus"]
+				each item in list
+					+in-c2("checkbox",item)
+				+e.show.btn Показать еще 10
 			+group('Производитель')
 				-
 					var list = ["ASUS","A-DATA","ALCATEL","ACTIV","ACER","APACER","APPLE","ASAU","AUKEY","BLUEDIO"]
@@ -54,7 +67,15 @@ mixin s-filter()
 				each item in list
 					+in-c2("checkbox",item)
 			+group('Количество ядер процессора')
+				-
+					var list = ["2","4","6","8"]
+				each item in list
+					+in-c2("checkbox",item)
 			+group('Встроенная память')
+				-
+					var list = ["8","16","32","64","128","256"]
+				each item in list
+					+in-c2("checkbox",item)
 			+e.sidebar-list
 				+e.discharge.BUTTON Сбросить
 				+e.apply.BUTTON Применить

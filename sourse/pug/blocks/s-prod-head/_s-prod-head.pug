@@ -12,9 +12,26 @@ mixin s-prod-head()
 					a.number-reviews(href="#") 30 отзывов
 				+e.vendor-code Артикул: 445899-998
 			.row
-				.col-lg-8
+				.col-lg-7.col-xl-8.col-md-6
 					.row
-						.col-md-2.second-mobile
+						.col-lg-9
+								.swiper-container.gallery-top
+									.swiper-wrapper
+										.swiper-slide
+											.img-wrap
+												img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-1.png" alt="")
+										.swiper-slide
+											.img-wrap
+												img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-2.png" alt="")
+										.swiper-slide
+											.img-wrap
+												img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-3.png" alt="")
+										.swiper-slide
+											.img-wrap
+												img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-4.png" alt="")
+									.swiper-button-next.swiper-button-black
+									.swiper-button-prev.swiper-button-black
+						.col-lg-2.order-lg-first
 							.swiper-container.gallery-thumbs
 								.swiper-wrapper
 									.swiper-slide
@@ -29,23 +46,7 @@ mixin s-prod-head()
 									.swiper-slide
 										+e.img-wrap
 											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-4.png" alt="")
-						.col-md-9.firs-mobile
-							.swiper-container.gallery-top
-								.swiper-wrapper
-									.swiper-slide
-										.img-wrap
-											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-1.png" alt="")
-									.swiper-slide
-										.img-wrap
-											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-2.png" alt="")
-									.swiper-slide
-										.img-wrap
-											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-3.png" alt="")
-									.swiper-slide
-										.img-wrap
-											img.res-i.swiper-lazy(src='#' data-src="img/@2x/prod-item-4.png" alt="")
-								.swiper-button-next.swiper-button-black
-								.swiper-button-prev.swiper-button-black
+						
 				.col
 					+e.buy
 						.row

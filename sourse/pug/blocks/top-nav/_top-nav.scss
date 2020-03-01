@@ -26,6 +26,20 @@
 		.catalog-menu {
 			padding-left: rem(18);
 			z-index: 5;
+			@include media-breakpoint-only(lg) {
+				&__toggle-text {
+					padding-left: rem(25);
+					padding-right: rem(15);
+				}
+			}
+			@include media-breakpoint-only(md) {
+				padding-left: rem(10);
+				&__toggle-text {
+					font-size: rem(14);
+					padding-left: rem(25);
+					padding-right: rem(5);
+				}
+			}
 		}
 		&.active {
 			@include media-breakpoint-down(sm) {

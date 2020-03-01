@@ -40,7 +40,9 @@
 		background-color: #f2f2f2;
 
 		input {
-			max-width: rem(10);
+			width: rem(30);
+			margin-left: rem(2);
+			margin-right: rem(2);
 			@include media-breakpoint-up(md){
 				max-width: rem(30);
 			}
@@ -57,6 +59,7 @@
 
 		button {
 			border-radius: 50%;
+			background-color: transparent;
 			border: none;
 			width: rem(40);
 			height: rem(40);
